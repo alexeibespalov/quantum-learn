@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "linear-server": {
+      "httpUrl": "https://mcp.linear.app/mcp"
+    }
+  }
+}
