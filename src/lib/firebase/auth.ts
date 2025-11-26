@@ -12,12 +12,17 @@ import {
 import { auth } from "./config";
 import { createUserProfile } from "./firestore";
 
+function getAuthInstance() {
+  if (!auth) throw new Error("Firebase Auth not initialized");
+  return auth;
+}
+
 export async function signUp(
   email: string,
   password: string
 ): Promise<UserCredential> {
   const userCredential = await createUserWithEmailAndPassword(
-    auth,
+    getAuthInstance(),
     email,
     password
   );
@@ -37,7 +42,7 @@ export async function signIn(
   email: string,
   password: string
 ): Promise<UserCredential> {
-  return signInWithEmailAndPassword(auth, email, password);
+  return signInWithEmailAndPassword(getAuthInstance(), email, password);
 }
 
 export async function signInWithGoogle(): Promise<UserCredential> {
@@ -45,7 +50,7 @@ export async function signInWithGoogle(): Promise<UserCredential> {
   provider.addScope("profile");
   provider.addScope("email");
 
-  const userCredential = await signInWithPopup(auth, provider);
+  const userCredential = await signInWithPopup(getAuthInstance(), provider);
 
   // Create/update user profile with Google info
   await createUserProfile(userCredential.user.uid, {
@@ -58,11 +63,11 @@ export async function signInWithGoogle(): Promise<UserCredential> {
 }
 
 export async function signOut(): Promise<void> {
-  return firebaseSignOut(auth);
+  return firebaseSignOut(getAuthInstance());
 }
 
 export async function resetPassword(email: string): Promise<void> {
-  return sendPasswordResetEmail(auth, email);
+  return sendPasswordResetEmail(getAuthInstance(), email);
 }
 
 export async function resendVerificationEmail(user: User): Promise<void> {

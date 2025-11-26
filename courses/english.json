@@ -1,0 +1,206 @@
+{
+  "id": "english-year9-gcse",
+  "subjectId": "english",
+  "title": "English: Year 9 Complete GCSE Prep",
+  "description": "Mastering the art of language and literature. From Shakespearean tragedy to persuasive rhetoric.",
+  "icon": "book-open",
+  "level": 3,
+  "estimatedDuration": 3600,
+  "prerequisites": [],
+  "modules": [
+    {
+      "id": "eng-lang-1",
+      "title": "Creative Writing (Fiction)",
+      "description": "Unleashing imagination with structured technique.",
+      "order": 1,
+      "lessons": [
+        {
+          "id": "eng-lang-1-1",
+          "type": "chat",
+          "title": "Show, Don't Tell",
+          "duration": 20,
+          "order": 1,
+          "content": {
+            "openingMessage": "I want you to describe a haunted house. But here's the rule: You cannot use the words 'scary', 'dark', or 'creepy'. How would you make me FEEL scared?",
+            "tutorConfig": {
+              "persona": "Creative Writing Coach",
+              "systemPrompt": "Teach the 'Show, Don't Tell' technique.\n\n**Goal:** Transform abstract adjectives into concrete sensory details.\n\n**Process:**\n1. Critique the student's haunted house description. Look for sensory words (creaking floorboards, smell of rot, cold draft).\n2. Introduce the 5 Senses method.\n3. Challenge: Describe a 'hot day' without saying hot/warm/sunny. (Sweat, shimmering air, melting ice cream).\n4. Explain 'Pathetic Fallacy' (weather reflecting mood).",
+              "successCriteria": [
+                "Use sensory imagery",
+                "Avoid generic adjectives"
+              ],
+              "dynamicAssets": [
+                {
+                  "id": "vis-haunted-house",
+                  "trigger": "inspire_haunted",
+                  "type": "image",
+                  "prompt": "A gloomy, dilapidated Victorian house on a hill at twilight. Dead twisted trees, a single lit window with a silhouette, fog rolling across the ground. Cinematic, atmospheric.",
+                  "altText": "Atmospheric Haunted House"
+                }
+              ]
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        },
+        {
+          "id": "eng-lang-1-2",
+          "type": "chat",
+          "title": "Narrative Structure",
+          "duration": 20,
+          "order": 2,
+          "content": {
+            "openingMessage": "Every great movie you've ever seen likely follows the same shape. We call it the Narrative Arc or Freytag's Pyramid. Can you guess the 5 parts?",
+            "tutorConfig": {
+              "persona": "Story Architect",
+              "systemPrompt": "Teach Narrative Structure.\n\n**The Arc:**\n1. **Exposition:** Setting the scene.\n2. **Inciting Incident:** The problem starts.\n3. **Rising Action:** Tension builds.\n4. **Climax:** The explosion/turning point.\n5. **Falling Action/Resolution:** The aftermath.\n\n**Activity:** Apply this to 'The Lion King' or 'Harry Potter' (or a story the student knows). Ask them to identify the Climax.",
+              "successCriteria": [
+                "Identify 5 parts of Freytag's Pyramid",
+                "Plan a short story structure"
+              ],
+              "dynamicAssets": [
+                {
+                  "id": "vis-freytag",
+                  "trigger": "show_arc",
+                  "type": "image",
+                  "prompt": "A simple line diagram of Freytag's Pyramid. Flat start (Exposition), rising slope (Rising Action), sharp peak (Climax), falling slope (Falling Action), flat end (Resolution). Labels in bold.",
+                  "altText": "Freytag's Pyramid Diagram"
+                }
+              ]
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "eng-lit-1",
+      "title": "Shakespeare: Macbeth",
+      "description": "Ambition, Witchcraft, and Regicide.",
+      "order": 2,
+      "lessons": [
+        {
+          "id": "eng-lit-1-1",
+          "type": "chat",
+          "title": "The Supernatural",
+          "duration": 25,
+          "order": 1,
+          "content": {
+            "openingMessage": "In 1606, people didn't watch horror movies. They went to see Macbeth. The play opens with three Witches. Why do you think Shakespeare started this way?",
+            "tutorConfig": {
+              "persona": "Renaissance Historian",
+              "systemPrompt": "Teach Context and Mood in Act 1 Scene 1.\n\n**Context:** King James I was obsessed with witch hunting (wrote 'Daemonologie'). Shakespeare wrote this to please him.\n**Analysis:** 'Fair is foul, and foul is fair'. (Paradox). \n**Discussion:** How does this line set the theme for the whole play? (Nothing is as it seems; good people turn bad).\n\n**Activity:** Analyze the witches' speech patterns (Trochaic Tetrameter - chanting) vs noble characters (Iambic Pentameter).",
+              "successCriteria": [
+                "Understand Jacobean context of witchcraft",
+                "Analyze 'Fair is foul'",
+                "Identify pathetic fallacy (Thunder and Lightning)"
+              ],
+              "dynamicAssets": [
+                {
+                  "id": "vid-witches-intro",
+                  "trigger": "show_witches",
+                  "type": "video",
+                  "veoPrompt": "Cinematic scene on a desolate Scottish heath. Three mysterious, shrouded figures standing in mist and rain. Lightning flashes. They are chanting around a cauldron. Dark, moody, 17th-century theatre style.",
+                  "prompt": "Three Witches on a heath",
+                  "altText": "The Three Witches"
+                }
+              ]
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        },
+        {
+          "id": "eng-lit-1-2",
+          "type": "chat",
+          "title": "Lady Macbeth's Ambition",
+          "duration": 25,
+          "order": 2,
+          "content": {
+            "openingMessage": "Macbeth writes to his wife about the prophecy. Her reaction? She wants to kill the King immediately. But she worries Macbeth is 'too full o' the milk of human kindness'. What does she mean?",
+            "tutorConfig": {
+              "persona": "Literary Analyst",
+              "systemPrompt": "Analyze Act 1 Scene 5 (Lady Macbeth's Soliloquy).\n\n**Key Quotes:**\n- 'Unsex me here' (Remove feminine weakness/compassion).\n- 'Look like the innocent flower, but be the serpent under't' (Deception/Biblical imagery).\n\n**Discussion:** Is Lady Macbeth the true villain? She manipulates Macbeth by questioning his masculinity ('When you durst do it, then you were a man').",
+              "successCriteria": [
+                "Analyze 'Unsex me here'",
+                "Explain the theme of Gender and Power"
+              ],
+              "dynamicAssets": []
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "eng-lang-2",
+      "title": "Non-Fiction & Persuasion",
+      "description": "The power of rhetoric.",
+      "order": 3,
+      "lessons": [
+        {
+          "id": "eng-lang-2-1",
+          "type": "chat",
+          "title": "DAFOREST Techniques",
+          "duration": 20,
+          "order": 1,
+          "content": {
+            "openingMessage": "If you wanted to convince me to ban homework forever, simply saying 'it's boring' won't work. You need weapons of persuasion. We call them DAFOREST.",
+            "tutorConfig": {
+              "persona": "Debate Coach",
+              "systemPrompt": "Teach Rhetorical Devices (DAFOREST).\n\n**Acronym:**\n- Direct Address\n- Alliteration / Anecdote\n- Facts\n- Opinions\n- Rhetorical Questions\n- Emotive Language / Exaggeration\n- Statistics\n- Triplets (Rule of Three)\n\n**Activity:** Ask the student to write one sentence using a Triplet and Emotive Language to argue against homework.",
+              "successCriteria": [
+                "Define DAFOREST devices",
+                "Use 3 devices in a paragraph"
+              ],
+              "dynamicAssets": []
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "eng-lit-2",
+      "title": "Poetry Anthology",
+      "description": "Power and Conflict.",
+      "order": 4,
+      "lessons": [
+        {
+          "id": "eng-lit-2-1",
+          "type": "chat",
+          "title": "Ozymandias",
+          "duration": 20,
+          "order": 1,
+          "content": {
+            "openingMessage": "Imagine a giant statue of a king in the desert, but it's broken and buried in sand. What does that tell you about power?",
+            "tutorConfig": {
+              "persona": "Poetry Critic",
+              "systemPrompt": "Teach 'Ozymandias' by Percy Bysshe Shelley.\n\n**Themes:** The transience of power, nature vs man.\n**Key Imagery:** 'Two vast and trunkless legs of stone', 'sneer of cold command', 'Look on my works, ye Mighty, and despair!'.\n**Irony:** The inscription tells people to despair at his power, but they despair because nothing remains. Nature has won.\n\n**Asset:** Visualize the statue.",
+              "successCriteria": [
+                "Understand the irony of the statue",
+                "Analyze 'sneer of cold command'"
+              ],
+              "dynamicAssets": [
+                {
+                  "id": "vis-ozymandias",
+                  "trigger": "show_statue",
+                  "type": "image",
+                  "prompt": "A vast desert landscape. In the foreground, two giant broken stone legs standing on a pedestal. A shattered stone head lies half-buried in the sand nearby, with a sneering expression. 'Ozymandias' style.",
+                  "altText": "The wreck of Ozymandias"
+                }
+              ]
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        }
+      ]
+    }
+  ],
+  "createdAt": "2025-11-26T12:00:00.000Z",
+  "updatedAt": "2025-11-26T12:00:00.000Z"
+}

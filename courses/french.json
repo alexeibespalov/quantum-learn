@@ -1,0 +1,196 @@
+{
+  "id": "french-year9-gcse",
+  "subjectId": "french",
+  "title": "French: Year 9 Complete GCSE Foundation",
+  "description": "Building confidence in Speaking, Listening, Reading, and Writing. Focus on the three time frames.",
+  "icon": "languages",
+  "level": 2,
+  "estimatedDuration": 3600,
+  "prerequisites": [],
+  "modules": [
+    {
+      "id": "fr-gram-1",
+      "title": "Grammar: The Time Machine",
+      "description": "Mastering Past, Present, and Future.",
+      "order": 1,
+      "lessons": [
+        {
+          "id": "fr-gram-1-1",
+          "type": "chat",
+          "title": "The Present Tense (ER Verbs)",
+          "duration": 20,
+          "order": 1,
+          "content": {
+            "openingMessage": "Bonjour! To speak French, you need to know who is doing the action. If I say 'Je parle', who is speaking? What about 'Nous parlons'?",
+            "tutorConfig": {
+              "persona": "French Native Tutor",
+              "systemPrompt": "Teach Present Tense Regular -ER verbs.\n\n**Concept:** The 'Stem' and the 'Endings'.\n- Verb: AIMER (to like). Stem: AIM-\n- Je: -e (J'aime)\n- Tu: -es (Tu aimes)\n- Il/Elle: -e (Il aime)\n- Nous: -ons (Nous aimons)\n- Vous: -ez (Vous aimez)\n- Ils/Elles: -ent (Ils aiment - silent 'ent'!)\n\n**Practice:** Ask student to conjugate 'JOUER' (to play). Correct them immediately if they pronounce 'ent' or forget the 's' on 'Tu'.",
+              "successCriteria": [
+                "Conjugate regular -ER verbs",
+                "Pronounce endings correctly (silence the -ent)"
+              ],
+              "dynamicAssets": [
+                {
+                  "id": "vis-verb-flower",
+                  "trigger": "show_endings",
+                  "type": "image",
+                  "prompt": "A flower diagram. Center says '-ER Verbs'. 6 Petals around it with endings: '-e', '-es', '-e', '-ons', '-ez', '-ent'. Colorful and clear.",
+                  "altText": "ER Verb Endings Flower"
+                }
+              ]
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        },
+        {
+          "id": "fr-gram-1-2",
+          "type": "chat",
+          "title": "The Perfect Past (Passé Composé)",
+          "duration": 25,
+          "order": 2,
+          "content": {
+            "openingMessage": "To talk about the past, French uses a 'Helper' verb. It's like saying 'I HAVE eaten' instead of 'I ate'. Do you know the helper verb?",
+            "tutorConfig": {
+              "persona": "Grammar Guide",
+              "systemPrompt": "Teach Passé Composé with Avoir.\n\n**Formula:** Subject + Avoir (Present) + Past Participle.\n- J'ai mangé (I ate).\n- Tu as regardé (You watched).\n\n**Drill:**\n1. Check knowledge of 'Avoir' (J'ai, Tu as, Il a...).\n2. Explain how to form Participle (ER -> é, IR -> i, RE -> u).\n3. Challenge: Translate 'I finished' (J'ai fini) and 'We waited' (Nous avons attendu).",
+              "successCriteria": [
+                "Recite Avoir conjugation",
+                "Form Past Participles",
+                "Construct simple past tense sentences"
+              ],
+              "dynamicAssets": []
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        },
+        {
+          "id": "fr-gram-1-3",
+          "type": "chat",
+          "title": "The Near Future",
+          "duration": 15,
+          "order": 3,
+          "content": {
+            "openingMessage": "The easiest tense in French! If you can say 'I am going', you can use the future tense. How do you say 'I am going'?",
+            "tutorConfig": {
+              "persona": "Encouraging Coach",
+              "systemPrompt": "Teach Futur Proche.\n\n**Formula:** Subject + Aller (Present) + Infinitive.\n- Je vais + jouer.\n- Tu vas + manger.\n\n**Activity:** Ask student to say 3 things they are going to do this weekend.",
+              "successCriteria": [
+                "Conjugate Aller",
+                "Form future sentences"
+              ],
+              "dynamicAssets": []
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "fr-theme-1",
+      "title": "Me, My Family & Friends",
+      "description": "Describing people and relationships.",
+      "order": 2,
+      "lessons": [
+        {
+          "id": "fr-theme-1-1",
+          "type": "chat",
+          "title": "Describing People",
+          "duration": 20,
+          "order": 1,
+          "content": {
+            "openingMessage": "Describe your best friend to me in French. Are they tall? Funny? Intelligent?",
+            "tutorConfig": {
+              "persona": "Conversation Partner",
+              "systemPrompt": "Teach Physical and Personality Adjectives.\n\n**Key Grammar:** Adjective Agreement.\n- Il est petit vs Elle est petit**e**.\n- Ils sont intelligent**s**.\n\n**Vocab:**\n- Eyes/Hair: J'ai les yeux bleus (NOT Je suis...).\n- Personality: Sympa, drôle, sévère, généreux.\n\n**Correction:** Watch out for position. Colors go AFTER the noun (les yeux bleus).",
+              "successCriteria": [
+                "Use Avoir for eyes/hair",
+                "Agree adjectives with gender/plural"
+              ],
+              "dynamicAssets": [
+                {
+                  "id": "vis-face-desc",
+                  "trigger": "describe_face",
+                  "type": "image",
+                  "prompt": "A cartoon face creator. A character with blue eyes and brown hair. Labels pointing to features: 'Les yeux bleus', 'Les cheveux bruns'.",
+                  "altText": "Face Description Vocab"
+                }
+              ]
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "fr-theme-2",
+      "title": "Free Time & Technology",
+      "description": "Sports, Music, and Social Media.",
+      "order": 3,
+      "lessons": [
+        {
+          "id": "fr-theme-2-1",
+          "type": "chat",
+          "title": "Sports and Hobbies",
+          "duration": 20,
+          "order": 1,
+          "content": {
+            "openingMessage": "Qu'est-ce que tu fais le week-end? (What do you do at the weekend?) Do you use 'Jouer' or 'Faire'?",
+            "tutorConfig": {
+              "persona": "Sports Coach",
+              "systemPrompt": "Teach Jouer vs Faire.\n\n**Rules:**\n- Jouer à + Ball sports / Games (au foot, au tennis, aux jeux vidéo).\n- Jouer de + Instruments (du piano, de la guitare).\n- Faire de + Other activities (de la natation, du vélo, de l'équitation).\n\n**Drill:** Rapid fire. I say 'Tennis', you say 'Je joue au tennis'. I say 'Swimming', you say 'Je fais de la natation'.",
+              "successCriteria": [
+                "Correctly select Jouer à, Jouer de, or Faire de"
+              ],
+              "dynamicAssets": []
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "fr-theme-3",
+      "title": "Town & Travel",
+      "description": "Getting around and holidays.",
+      "order": 4,
+      "lessons": [
+        {
+          "id": "fr-theme-3-1",
+          "type": "chat",
+          "title": "In the Town",
+          "duration": 20,
+          "order": 1,
+          "content": {
+            "openingMessage": "Excusez-moi, ou est la gare? (Excuse me, where is the station?) Can you give me directions?",
+            "tutorConfig": {
+              "persona": "Lost Tourist",
+              "systemPrompt": "Teach Places in Town and Directions.\n\n**Vocab:** La gare, la poste, le stade, le marché.\n**Directions:** Tout droit (straight on), à gauche (left), à droite (right).\n\n**Roleplay:** The AI plays a lost tourist. The student must guide them to the 'Cinema'.",
+              "successCriteria": [
+                "Give simple directions",
+                "Identify key town buildings"
+              ],
+              "dynamicAssets": [
+                {
+                  "id": "vis-town-map",
+                  "trigger": "show_map",
+                  "type": "image",
+                  "prompt": "A simple 2D street map. Roads labeled 'Rue de la Paix'. Buildings with icons: Station (train), Cinema (popcorn), Stadium (flag). Arrows showing a path 'Tout droit' then 'A droite'.",
+                  "altText": "Town Map Direction"
+                }
+              ]
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        }
+      ]
+    }
+  ],
+  "createdAt": "2025-11-26T12:00:00.000Z",
+  "updatedAt": "2025-11-26T12:00:00.000Z"
+}

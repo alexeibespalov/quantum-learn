@@ -9,11 +9,16 @@ import {
 import { db } from "./config";
 import { UserProfile, OnboardingData } from "@/types";
 
+function getDbInstance() {
+  if (!db) throw new Error("Firestore not initialized");
+  return db;
+}
+
 export async function createUserProfile(
   uid: string,
   data: Partial<UserProfile>
 ): Promise<void> {
-  const userRef = doc(db, "users", uid);
+  const userRef = doc(getDbInstance(), "users", uid);
   const userSnap = await getDoc(userRef);
 
   if (!userSnap.exists()) {
@@ -53,7 +58,7 @@ export async function createUserProfile(
 export async function getUserProfile(
   uid: string
 ): Promise<UserProfile | null> {
-  const userRef = doc(db, "users", uid);
+  const userRef = doc(getDbInstance(), "users", uid);
   const userSnap = await getDoc(userRef);
 
   if (userSnap.exists()) {
@@ -67,7 +72,7 @@ export async function updateUserProfile(
   uid: string,
   data: Partial<UserProfile>
 ): Promise<void> {
-  const userRef = doc(db, "users", uid);
+  const userRef = doc(getDbInstance(), "users", uid);
   await updateDoc(userRef, data);
 }
 
@@ -75,7 +80,7 @@ export async function completeOnboarding(
   uid: string,
   onboardingData: OnboardingData
 ): Promise<void> {
-  const userRef = doc(db, "users", uid);
+  const userRef = doc(getDbInstance(), "users", uid);
 
   await updateDoc(userRef, {
     displayName: onboardingData.displayName,

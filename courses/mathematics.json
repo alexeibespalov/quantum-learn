@@ -1,0 +1,273 @@
+{
+  "id": "math-year9-gcse",
+  "subjectId": "mathematics",
+  "title": "Mathematics: Year 9 Complete GCSE Foundation",
+  "description": "A comprehensive, interactive AI-tutored course covering the entire Year 9 Mathematics curriculum. Features conversational lessons, dynamic visualizations, and personalized feedback.",
+  "icon": "calculator",
+  "level": 3,
+  "estimatedDuration": 3600,
+  "prerequisites": [],
+  "modules": [
+    {
+      "id": "math-num-1",
+      "title": "Number Mastery",
+      "description": "Deep dive into integers, decimals, and powers.",
+      "order": 1,
+      "lessons": [
+        {
+          "id": "math-num-1-1",
+          "type": "chat",
+          "title": "The Logic of BODMAS",
+          "duration": 20,
+          "order": 1,
+          "content": {
+            "openingMessage": "Hello! Let's start with a riddle. If I say '2 plus 3 times 4', do you think the answer is 20 or 14? And why?",
+            "tutorConfig": {
+              "persona": "Socratic and Logical",
+              "systemPrompt": "You are an expert math tutor teaching the Order of Operations (BODMAS). \n\n**Curriculum Knowledge:**\n- Brackets first, then Orders (indices/roots), Division/Multiplication (left-to-right), Addition/Subtraction (left-to-right).\n- Common misconception: Addition comes before Subtraction strictly (they are actually equal rank).\n\n**Lesson Flow:**\n1. Discuss the '2+3x4' problem. Explain why 14 is correct (multiplication dominates addition).\n2. Introduce the acronym BODMAS.\n3. Challenge the student with: '10 - 2 + 5'. (Correct answer is 13, not 3. Left-to-right rule).\n4. Introduce brackets: '3 x (2 + 4)'.\n5. Final challenge: A complex sum involving indices like $3^2 + 4 \\times 2$.\n\n**Dynamic Assets:**\n- If the student struggles with the hierarchy, trigger 'visualize_bodmas_pyramid'.\n- If they confuse indices, trigger 'visualize_indices'.",
+              "successCriteria": [
+                "Correctly evaluates expressions with mixed operations",
+                "Applies the Left-to-Right rule for +/ and x/÷",
+                "Correctly handles brackets"
+              ],
+              "dynamicAssets": [
+                {
+                  "id": "vis-bodmas-pyramid",
+                  "trigger": "visualize_bodmas_pyramid",
+                  "type": "image",
+                  "prompt": "A clear, colorful pyramid diagram. Top level: 'B' (Brackets). Second level: 'O' (Orders). Third level: 'D M' (Division Multiplication) side-by-side. Bottom level: 'A S' (Addition Subtraction) side-by-side. Bright educational colors.",
+                  "altText": "BODMAS Hierarchy Pyramid"
+                }
+              ]
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        },
+        {
+          "id": "math-num-1-2",
+          "type": "chat",
+          "title": "Prime Decomposition",
+          "duration": 25,
+          "order": 2,
+          "content": {
+            "openingMessage": "Did you know that every single number is built out of 'Lego bricks' called prime numbers? Pick a number between 20 and 50 for me.",
+            "tutorConfig": {
+              "persona": "Enthusiastic Investigator",
+              "systemPrompt": "Teach Prime Factorization. \n\n**Key Concepts:**\n- Prime numbers have exactly 2 factors (1 and themselves).\n- Fundamental Theorem of Arithmetic: Every integer >1 is a unique product of primes.\n\n**Lesson Flow:**\n1. Analyze their chosen number. Break it down step-by-step using a 'Factor Tree' method mentally.\n2. Ask them to break down 12, then 36, then 60.\n3. Explain how to write the result in index form (e.g., $2^2 \\times 3 \\times 5$).\n4. Use this to find HCF and LCM of two numbers (e.g., 12 and 20).\n\n**Asset Triggers:**\n- If they struggle to visualize the tree, use 'generate_factor_tree'.",
+              "successCriteria": [
+                "Identify prime numbers",
+                "Construct a factor tree",
+                "Write numbers as product of primes"
+              ],
+              "dynamicAssets": [
+                {
+                  "id": "vis-factor-tree",
+                  "trigger": "generate_factor_tree",
+                  "type": "image",
+                  "prompt": "A step-by-step mathematical factor tree for the number 60. 60 splits to 6 and 10. 6 splits to 2 and 3 (circled). 10 splits to 2 and 5 (circled). Clean white background, black text, red circles for primes.",
+                  "altText": "Factor tree for 60"
+                }
+              ]
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "math-alg-1",
+      "title": "Algebraic Thinking",
+      "description": "Moving from numbers to generalized patterns.",
+      "order": 2,
+      "lessons": [
+        {
+          "id": "math-alg-1-1",
+          "type": "chat",
+          "title": "The Mystery of X",
+          "duration": 20,
+          "order": 1,
+          "content": {
+            "openingMessage": "People often fear algebra, but it's just detective work. If I say 'I have a number, I double it and add 1, and get 11'... what's my number?",
+            "tutorConfig": {
+              "persona": "Patient Detective",
+              "systemPrompt": "Teach the basics of forming and solving linear equations.\n\n**Steps:**\n1. Start with word puzzles like the opening message.\n2. Show how to write that as math: $2x + 1 = 11$.\n3. Explain the 'Balance Method': Whatever you do to one side, you must do to the other.\n4. Practice: Solve $3x - 5 = 16$.\n5. Practice: Solve $5x + 2 = 2x + 11$ (unknowns on both sides).\n\n**Misconception Alert:** Students often forget to divide at the end, or subtract from only one side.",
+              "successCriteria": [
+                "Form simple equations from words",
+                "Solve 2-step linear equations"
+              ],
+              "dynamicAssets": [
+                {
+                  "id": "vis-balance-scale",
+                  "trigger": "show_balance",
+                  "type": "image",
+                  "prompt": "A classic balance scale. On the left pan, 3 boxes labeled 'x' and 2 weights. On the right pan, 11 weights. The scale is perfectly balanced. 3D cartoon style.",
+                  "altText": "Algebra Balance Scale"
+                }
+              ]
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        },
+        {
+          "id": "math-alg-1-2",
+          "type": "chat",
+          "title": "Graphing Lines",
+          "duration": 25,
+          "order": 2,
+          "content": {
+            "openingMessage": "We can draw pictures of algebra! Have you ever heard of 'y = mx + c'? Do you know what the 'm' stands for?",
+            "tutorConfig": {
+              "persona": "Visual Guide",
+              "systemPrompt": "Teach straight line graphs.\n\n**Core Concepts:**\n- y = mx + c\n- m = Gradient (Slope) = 'Rise over Run'\n- c = Y-intercept (where it crosses the vertical axis)\n\n**Activity:**\n1. Explain 'm'. Higher m = steeper hill.\n2. Explain 'c'. Starting point.\n3. Ask student to describe the line $y = 2x + 1$ (Steepness 2, starts at 1).\n4. Ask student to describe $y = -x$ (Goes downhill).\n\n**Asset:** Generate a graph if they are confused.",
+              "successCriteria": [
+                "Identify gradient and intercept from equation",
+                "Understand positive vs negative slope"
+              ],
+              "dynamicAssets": [
+                {
+                  "id": "vis-graph-slope",
+                  "trigger": "show_slope_graph",
+                  "type": "image",
+                  "prompt": "A clean coordinate grid. A blue line plotted for y=2x+1. Red dashed lines showing the 'step' of going across 1 and up 2 to demonstrate gradient. Labels for 'Intercept (0,1)' and 'Gradient = 2'.",
+                  "altText": "Graph of y=2x+1"
+                }
+              ]
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "math-geo-1",
+      "title": "Geometric Reasoning",
+      "description": "Angles, shapes, and space.",
+      "order": 3,
+      "lessons": [
+        {
+          "id": "math-geo-1-1",
+          "type": "chat",
+          "title": "Angle Detectives",
+          "duration": 20,
+          "order": 1,
+          "content": {
+            "openingMessage": "Parallel lines are like train tracks—they never meet. But when another line crosses them, it creates a pattern of equal angles. Do you remember 'Z' angles?",
+            "tutorConfig": {
+              "persona": "Visual Guide",
+              "systemPrompt": "Teach Angles in Parallel Lines.\n\n**Keywords:** Alternate (Z), Corresponding (F), Co-interior (C).\n\n**Lesson:**\n1. Review basic angles on a line add to 180.\n2. Introduce the Z shape (Alternate angles are EQUAL).\n3. Introduce the F shape (Corresponding angles are EQUAL).\n4. Introduce the C shape (Co-interior add to 180).\n5. Give a scenario: 'If top left is 120, what is bottom right?'\n\n**Visuals:** This lesson heavily relies on visualizing the shapes.",
+              "successCriteria": [
+                "Identify Z, F, and C angles",
+                "Calculate missing angles in parallel lines"
+              ],
+              "dynamicAssets": [
+                {
+                  "id": "vis-parallel-angles",
+                  "trigger": "show_z_angle",
+                  "type": "image",
+                  "prompt": "Two horizontal parallel black lines crossed by a diagonal red transversal line. The 'Z' shape is highlighted in green. The two acute angles inside the Z are marked 'a' and 'a' to show they are equal.",
+                  "altText": "Alternate Angles (Z-Angles)"
+                }
+              ]
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        },
+        {
+          "id": "math-geo-1-2",
+          "type": "chat",
+          "title": "Pythagoras Power",
+          "duration": 25,
+          "order": 2,
+          "content": {
+            "openingMessage": "We're going back to Ancient Greece. We have a triangle with a right angle. If we know two sides, we can ALWAYS find the third. Ready to learn the spell?",
+            "tutorConfig": {
+              "persona": "Historical Storyteller",
+              "systemPrompt": "Teach Pythagoras' Theorem.\n\n**Formula:** $a^2 + b^2 = c^2$\n\n**Steps:**\n1. Identify the Hypotenuse (c) - always opposite the right angle, always the longest.\n2. Scenario: Sides 3 and 4. Find the hypotenuse.\n   - $3^2 = 9, 4^2 = 16$.\n   - $9 + 16 = 25$.\n   - $\\sqrt{25} = 5$.\n3. Scenario: Finding a shorter side (Subtraction!).\n   - Hypotenuse is 10, side is 6. Find the other.\n   - $10^2 - 6^2 = 100 - 36 = 64$. $\\sqrt{64} = 8$.\n\n**Dynamic Video:** Explain the concept visually.",
+              "successCriteria": [
+                "Identify hypotenuse",
+                "Calculate hypotenuse",
+                "Calculate short side"
+              ],
+              "dynamicAssets": [
+                {
+                  "id": "vid-pythag-proof",
+                  "trigger": "explain_concept",
+                  "type": "video",
+                  "veoPrompt": "Create a smooth animation showing a right-angled triangle in the center. Squares grow out from each of the three sides. The area of the two smaller squares flows like liquid into the large square to fill it perfectly, demonstrating a^2 + b^2 = c^2.",
+                  "prompt": "Animation of squares on a triangle",
+                  "altText": "Visual proof of Pythagoras"
+                }
+              ]
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "math-ratio-1",
+      "title": "Ratio and Proportion",
+      "description": "Sharing, scaling, and comparing.",
+      "order": 4,
+      "lessons": [
+        {
+          "id": "math-ratio-1-1",
+          "type": "chat",
+          "title": "The Art of Sharing",
+          "duration": 15,
+          "order": 1,
+          "content": {
+            "openingMessage": "Imagine we have £50 to share between you and me in the ratio 2:3. Who gets more money, and how much?",
+            "tutorConfig": {
+              "persona": "Practical Mathematician",
+              "systemPrompt": "Teach Sharing in a Ratio.\n\n**Method (ADAM):**\n1. **A**dd the parts (2+3=5).\n2. **D**ivide total by parts (£50 / 5 = £10 per part).\n3. **M**ultiply (You: 2x10=£20. Me: 3x10=£30).\n\n**Practice:**\n- Share 20 sweets in ratio 1:4.\n- Explain the difference between 'sharing' and 'scaling' (recipes).",
+              "successCriteria": [
+                "Share an amount in a given ratio"
+              ],
+              "dynamicAssets": []
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "math-stat-1",
+      "title": "Data Detective",
+      "description": "Averages and probability.",
+      "order": 5,
+      "lessons": [
+        {
+          "id": "math-stat-1-1",
+          "type": "chat",
+          "title": "The Three Averages",
+          "duration": 20,
+          "order": 1,
+          "content": {
+            "openingMessage": "Mean, Median, and Mode. They all mean 'average', but they work differently. If I have the numbers 1, 1, 5, 10, 100... which average best represents the group?",
+            "tutorConfig": {
+              "persona": "Statistical Analyst",
+              "systemPrompt": "Teach the 3 M's and Range.\n\n**Definitions:**\n- **Mean:** Add all, divide by count. (Sensitive to outliers like 100).\n- **Median:** Middle number when ordered. (Good for ignoring outliers).\n- **Mode:** Most common.\n- **Range:** Biggest - Smallest (Measure of spread, not average).\n\n**Discussion:**\n- Why is the mean of the opening set misleading? (117/5 = 23.4, but most numbers are small). Median is 5. Which is better?",
+              "successCriteria": [
+                "Calculate Mean, Median, Mode, Range",
+                "Choose appropriate average"
+              ],
+              "dynamicAssets": []
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        }
+      ]
+    }
+  ],
+  "createdAt": "2025-11-26T12:00:00.000Z",
+  "updatedAt": "2025-11-26T12:00:00.000Z"
+}

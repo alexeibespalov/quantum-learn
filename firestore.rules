@@ -20,6 +20,17 @@ service cloud.firestore {
       allow delete: if isOwner(userId);
     }
     
+    // Courses collection: read-only for authenticated users
+    match /courses/{courseId} {
+      allow read: if isAuthenticated();
+      allow write: if false; // Only server-side writes for now
+    }
+    
+    // User progress collection: users can read/write their own progress
+    match /user_progress/{userId}/courses/{courseId} {
+      allow read, write: if isOwner(userId);
+    }
+    
     // Add other collections as needed (lessons, subjects, etc.)
     // For now, these are read-only for authenticated users
     match /subjects/{document=**} {
