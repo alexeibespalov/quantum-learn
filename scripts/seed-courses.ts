@@ -1,7 +1,6 @@
 import { initializeApp } from "firebase/app";
 import {
   getFirestore,
-  connectFirestoreEmulator,
   collection,
   doc,
   setDoc,
@@ -9,24 +8,17 @@ import {
 } from "firebase/firestore";
 import type { Course } from "../src/types/course";
 
-// Initialize Firebase (use emulator in development)
+// Initialize Firebase with production config
 const app = initializeApp({
-  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || "quantum-learn-dev",
-  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY || "test-key",
-  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN || "test.firebaseapp.com",
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 });
 
 const db = getFirestore(app);
-
-// Connect to emulator if in development
-if (process.env.NODE_ENV === "development" || process.env.USE_EMULATOR === "true") {
-  try {
-    connectFirestoreEmulator(db, "localhost", 8080);
-  } catch (error) {
-    // Emulator already connected, ignore
-    console.log("Emulator connection skipped (may already be connected)");
-  }
-}
 
 async function seedCourses() {
   const now = Timestamp.now();

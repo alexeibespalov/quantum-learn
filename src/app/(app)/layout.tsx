@@ -8,7 +8,7 @@ import { MobileNav } from "@/components/layout/MobileNav";
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (
     <AuthGuard>
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-background">
         {/* Desktop Sidebar */}
         <Sidebar className="hidden lg:flex" />
 

@@ -75,11 +75,11 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-lg p-8">
-      <h2 className="text-2xl font-bold text-gray-900 mb-6">Welcome back</h2>
+    <div className="bg-card rounded-xl shadow-lg p-8 border border-border">
+      <h2 className="text-2xl font-bold text-card-foreground mb-6">Welcome back</h2>
 
       {error && (
-        <div className="mb-4 p-3 bg-red-50 border border-red-200 text-red-700 rounded-lg text-sm">
+        <div className="mb-4 p-3 bg-destructive/10 border border-destructive/20 text-destructive rounded-lg text-sm">
           {error}
         </div>
       )}
@@ -106,7 +106,7 @@ export default function LoginPage() {
         <div className="text-right">
           <Link
             href="/forgot-password"
-            className="text-sm text-primary-600 hover:text-primary-700"
+            className="text-sm text-primary hover:text-primary/80"
           >
             Forgot password?
           </Link>
@@ -120,10 +120,10 @@ export default function LoginPage() {
       <div className="mt-6">
         <div className="relative">
           <div className="absolute inset-0 flex items-center">
-            <div className="w-full border-t border-gray-200" />
+            <div className="w-full border-t border-border" />
           </div>
           <div className="relative flex justify-center text-sm">
-            <span className="px-2 bg-white text-gray-500">Or continue with</span>
+            <span className="px-2 bg-card text-muted-foreground">Or continue with</span>
           </div>
         </div>
 
@@ -156,11 +156,11 @@ export default function LoginPage() {
         </Button>
       </div>
 
-      <p className="mt-6 text-center text-sm text-gray-600">
+      <p className="mt-6 text-center text-sm text-muted-foreground">
         Don&apos;t have an account?{" "}
         <Link
           href="/signup"
-          className="text-primary-600 hover:text-primary-700 font-medium"
+          className="text-primary hover:text-primary/80 font-medium"
         >
           Sign up
         </Link>

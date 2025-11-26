@@ -32,8 +32,8 @@ export const ChatBubble: React.FC<ChatBubbleProps> = ({
         className={cn(
           "max-w-[85%] rounded-2xl px-5 py-4 shadow-sm",
           role === "user"
-            ? "bg-primary-600 text-white rounded-br-sm"
-            : "bg-white text-gray-900 border border-gray-100 rounded-bl-sm"
+            ? "bg-primary text-primary-foreground rounded-br-sm"
+            : "bg-card border border-border rounded-bl-sm"
         )}
       >
         {parts.map((part, index) => {
@@ -56,7 +56,9 @@ export const ChatBubble: React.FC<ChatBubbleProps> = ({
               key={index}
               className={cn(
                 "prose prose-sm max-w-none",
-                role === "user" ? "prose-invert" : "prose-slate"
+                role === "user"
+                  ? "prose-invert"
+                  : "prose-invert prose-headings:text-card-foreground prose-p:text-card-foreground prose-strong:text-card-foreground prose-code:text-card-foreground prose-pre:text-card-foreground prose-li:text-card-foreground prose-a:text-primary hover:prose-a:text-primary/80"
               )}
             >
               <ReactMarkdown

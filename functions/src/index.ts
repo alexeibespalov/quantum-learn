@@ -15,3 +15,4 @@ setGlobalOptions({ maxInstances: 10 });
 // Export Genkit flows
 export * from "./genkit-sample";
 export * from "./tutor";
+export * from "./practice";

@@ -2,20 +2,74 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* 
+      WILDERNESS PALETTE - DARK THEME DEFAULT 
+      Base Hue: 196 (Teal/Slate) for background
+      Accent Hue: 16 (Orange/Terracotta)
+    */
+
+    /* Background: Very Dark Slate (#12181b) */
+    --background: 196 20% 9%;
+    
+    /* Foreground: Off-white/Pale Peach (#F2CBBD mixed with white) */
+    --foreground: 16 30% 96%;
+
+    /* Card: Slightly lighter slate (#1b2428) */
+    --card: 196 20% 13%;
+    --card-foreground: 16 30% 96%;
+
+    /* Popover: Same as card */
+    --popover: 196 20% 13%;
+    --popover-foreground: 16 30% 96%;
+
+    /* Primary: Wilderness 1 (#6393A6 - Muted Teal) */
+    --primary: 196 27% 52%;
+    --primary-foreground: 196 30% 10%; /* Dark text on teal */
+
+    /* Secondary: Wilderness 2 (#BF785E - Terracotta) */
+    --secondary: 16 43% 56%;
+    --secondary-foreground: 16 43% 10%;
+
+    /* Muted: Wilderness 4 (#A65B4B - Rust) reduced opacity or desaturated */
+    /* Actually using a slate grey for general muted text, and Rust for specific muted UI elements */
+    --muted: 196 20% 20%;
+    --muted-foreground: 196 10% 70%;
+
+    /* Accent: Wilderness 3 (#F2CBBD - Peach) */
+    --accent: 16 67% 84%;
+    --accent-foreground: 16 67% 20%;
+
+    /* Destructive: Wilderness 5 (#733B36 - Maroon) */
+    --destructive: 5 36% 33%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Border: Dark Slate */
+    --border: 196 20% 20%;
+    
+    /* Input: Dark Slate */
+    --input: 196 20% 20%;
+    
+    /* Ring: Primary Teal */
+    --ring: 196 27% 52%;
+
+    /* Chart Colors (Recharts) */
+    --chart-1: 196 27% 52%; /* Teal */
+    --chart-2: 16 43% 56%;  /* Orange */
+    --chart-3: 16 67% 84%;  /* Peach */
+    --chart-4: 11 37% 47%;  /* Rust */
+    --chart-5: 5 36% 33%;   /* Maroon */
+
+    --radius: 0.75rem;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: inherit;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }

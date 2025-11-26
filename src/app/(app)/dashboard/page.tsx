@@ -35,10 +35,10 @@ export default function DashboardPage() {
           {avatar?.emoji || "👤"}
         </div>
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">
+          <h1 className="text-2xl font-bold text-foreground">
             Welcome back, {userProfile?.displayName || "Student"}!
           </h1>
-          <p className="text-gray-600">Ready to continue your learning journey?</p>
+          <p className="text-muted-foreground">Ready to continue your learning journey?</p>
         </div>
       </div>
 
@@ -78,20 +78,20 @@ export default function DashboardPage() {
 
       {/* Review Alert */}
       {reviewsDue > 0 && (
-        <div className="bg-orange-50 border border-orange-200 rounded-xl p-4 flex items-center justify-between">
+        <div className="bg-secondary/10 border border-secondary/20 rounded-xl p-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center">
-              <RefreshCw className="w-5 h-5 text-orange-600" />
+            <div className="w-10 h-10 bg-secondary/20 rounded-full flex items-center justify-center">
+              <RefreshCw className="w-5 h-5 text-secondary" />
             </div>
             <div>
-              <p className="font-medium text-orange-800">
+              <p className="font-medium text-secondary">
                 {reviewsDue} cards ready for review
               </p>
-              <p className="text-sm text-orange-600">Keep your knowledge fresh!</p>
+              <p className="text-sm text-secondary/80">Keep your knowledge fresh!</p>
             </div>
           </div>
           <Link href="/review">
-            <Button variant="outline" size="sm">
+            <Button variant="outline" size="sm" className="border-secondary/30 text-secondary hover:bg-secondary/10">
               Review Now
             </Button>
           </Link>
@@ -100,48 +100,48 @@ export default function DashboardPage() {
 
       {/* Stats Grid */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="bg-white rounded-xl p-4 shadow-sm">
-          <div className="flex items-center gap-2 text-gray-500 mb-2">
+        <div className="bg-card rounded-xl p-4 shadow-sm border border-border">
+          <div className="flex items-center gap-2 text-muted-foreground mb-2">
             <Clock className="w-4 h-4" />
             <span className="text-sm">Study Time</span>
           </div>
-          <p className="text-2xl font-bold text-gray-900">{studyTimeThisWeek}</p>
-          <p className="text-xs text-gray-500">this week</p>
+          <p className="text-2xl font-bold text-foreground">{studyTimeThisWeek}</p>
+          <p className="text-xs text-muted-foreground">this week</p>
         </div>
 
-        <div className="bg-white rounded-xl p-4 shadow-sm">
-          <div className="flex items-center gap-2 text-gray-500 mb-2">
+        <div className="bg-card rounded-xl p-4 shadow-sm border border-border">
+          <div className="flex items-center gap-2 text-muted-foreground mb-2">
             <BookOpen className="w-4 h-4" />
             <span className="text-sm">Lessons</span>
           </div>
-          <p className="text-2xl font-bold text-gray-900">{lessonsCompleted}</p>
-          <p className="text-xs text-gray-500">completed</p>
+          <p className="text-2xl font-bold text-foreground">{lessonsCompleted}</p>
+          <p className="text-xs text-muted-foreground">completed</p>
         </div>
 
-        <div className="bg-white rounded-xl p-4 shadow-sm">
-          <div className="flex items-center gap-2 text-gray-500 mb-2">
+        <div className="bg-card rounded-xl p-4 shadow-sm border border-border">
+          <div className="flex items-center gap-2 text-muted-foreground mb-2">
             <Target className="w-4 h-4" />
             <span className="text-sm">XP</span>
           </div>
-          <p className="text-2xl font-bold text-gray-900">
+          <p className="text-2xl font-bold text-foreground">
             {userProfile?.xp || 0}
           </p>
-          <p className="text-xs text-gray-500">earned</p>
+          <p className="text-xs text-muted-foreground">earned</p>
         </div>
 
-        <div className="bg-white rounded-xl p-4 shadow-sm">
-          <div className="flex items-center gap-2 text-gray-500 mb-2">
+        <div className="bg-card rounded-xl p-4 shadow-sm border border-border">
+          <div className="flex items-center gap-2 text-muted-foreground mb-2">
             <Flame className="w-4 h-4" />
             <span className="text-sm">Streak</span>
           </div>
-          <p className="text-2xl font-bold text-gray-900">{currentStreak}</p>
-          <p className="text-xs text-gray-500">days</p>
+          <p className="text-2xl font-bold text-foreground">{currentStreak}</p>
+          <p className="text-xs text-muted-foreground">days</p>
         </div>
       </div>
 
       {/* Continue Learning */}
       <div>
-        <h2 className="text-lg font-semibold text-gray-900 mb-4">
+        <h2 className="text-lg font-semibold text-foreground mb-4">
           Continue Learning
         </h2>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -149,25 +149,25 @@ export default function DashboardPage() {
           {["Mathematics", "English", "Science"].map((subject) => (
             <div
               key={subject}
-              className="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow"
+              className="bg-card rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow border border-border"
             >
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center">
-                  <BookOpen className="w-5 h-5 text-primary-600" />
+                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                  <BookOpen className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <p className="font-medium text-gray-900">{subject}</p>
-                  <p className="text-sm text-gray-500">Module 2</p>
+                  <p className="font-medium text-foreground">{subject}</p>
+                  <p className="text-sm text-muted-foreground">Module 2</p>
                 </div>
               </div>
-              <div className="h-2 bg-gray-100 rounded-full overflow-hidden mb-2">
+              <div className="h-2 bg-muted rounded-full overflow-hidden mb-2">
                 <div
-                  className="h-full bg-primary-500 rounded-full"
+                  className="h-full bg-primary rounded-full"
                   style={{ width: `${Math.random() * 60 + 20}%` }}
                 />
               </div>
               <Link href="/subjects">
-                <Button variant="ghost" size="sm" className="w-full">
+                <Button variant="ghost" size="sm" className="w-full hover:bg-accent/10">
                   Continue
                 </Button>
               </Link>

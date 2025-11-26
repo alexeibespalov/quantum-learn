@@ -44,50 +44,49 @@ export function Sidebar({ className }: SidebarProps) {
   return (
     <aside
       className={cn(
-        "fixed left-0 top-0 h-full w-64 bg-white border-r border-gray-200 flex flex-col",
+        "fixed left-0 top-0 h-full w-64 bg-card border-r border-border flex flex-col",
         className
       )}
     >
       {/* Logo */}
-      <div className="p-6 border-b border-gray-100">
-        <h1 className="text-xl font-bold text-primary-600">QuantumLearn</h1>
+      <div className="p-6 border-b border-border">
+        <h1 className="text-xl font-bold text-primary">QuantumLearn</h1>
       </div>
 
-      {/* User Profile */}
-      <div className="p-4 border-b border-gray-100">
-        <div className="flex items-center gap-3">
-          <div
-            className={cn(
-              "w-12 h-12 rounded-full flex items-center justify-center text-2xl",
-              avatar?.bgColor || "bg-gray-100"
-            )}
-          >
-            {avatar?.emoji || "👤"}
-          </div>
-          <div className="flex-1 min-w-0">
-            <p className="font-medium text-gray-900 truncate">
-              {userProfile?.displayName || "Student"}
-            </p>
-            <p className="text-sm text-gray-500">
-              Level {userProfile?.level || 1}
-            </p>
-          </div>
-        </div>
-
-        {/* XP Progress */}
-        <div className="mt-3">
-          <div className="flex justify-between text-xs text-gray-500 mb-1">
-            <span>{currentXp % xpForLevel} XP</span>
-            <span>{xpForLevel} XP</span>
-          </div>
-          <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
-            <div
-              className="h-full bg-primary-500 rounded-full transition-all"
-              style={{ width: `${xpProgress}%` }}
-            />
-          </div>
-        </div>
-
+            {/* User Profile */}
+            <div className="p-4 border-b border-border">
+              <div className="flex items-center gap-3">
+                <div
+                  className={cn(
+                    "w-12 h-12 rounded-full flex items-center justify-center text-2xl",
+                    avatar?.bgColor || "bg-muted"
+                  )}
+                >
+                  {avatar?.emoji || "👤"}
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="font-medium text-foreground truncate">
+                    {userProfile?.displayName || "Student"}
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    Level {userProfile?.level || 1}
+                  </p>
+                </div>
+              </div>
+      
+              {/* XP Progress */}
+              <div className="mt-3">
+                <div className="flex justify-between text-xs text-muted-foreground mb-1">
+                  <span>{currentXp % xpForLevel} XP</span>
+                  <span>{xpForLevel} XP</span>
+                </div>
+                <div className="h-2 bg-muted rounded-full overflow-hidden">
+                  <div
+                    className="h-full bg-primary rounded-full transition-all"
+                    style={{ width: `${xpProgress}%` }}
+                  />
+                </div>
+              </div>
         {/* Streak */}
         {(userProfile?.streakDays || 0) > 0 && (
           <div className="mt-2 flex items-center gap-1 text-orange-500">
@@ -111,13 +110,15 @@ export function Sidebar({ className }: SidebarProps) {
                 <Link
                   href={item.path}
                   className={cn(
-                    "flex items-center gap-3 px-4 py-3 rounded-lg transition-colors",
+                    "flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors",
                     isActive
-                      ? "bg-primary-50 text-primary-700 font-medium"
-                      : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
+                      ? "bg-primary/10 text-primary"
+                      : "text-muted-foreground hover:bg-accent/10 hover:text-foreground"
                   )}
                 >
-                  <Icon className="w-5 h-5" />
+                  <Icon
+                    className={cn("w-5 h-5", isActive ? "text-primary" : "text-muted-foreground")}
+                  />
                   {item.label}
                 </Link>
               </li>
@@ -127,14 +128,14 @@ export function Sidebar({ className }: SidebarProps) {
       </nav>
 
       {/* Bottom Actions */}
-      <div className="p-4 border-t border-gray-100">
+      <div className="p-4 border-t border-border">
         <Link
           href="/settings"
           className={cn(
             "flex items-center gap-3 px-4 py-3 rounded-lg transition-colors",
             pathname === "/settings"
-              ? "bg-primary-50 text-primary-700 font-medium"
-              : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
+              ? "bg-primary/10 text-primary font-medium"
+              : "text-muted-foreground hover:bg-accent/10 hover:text-foreground"
           )}
         >
           <Settings className="w-5 h-5" />
@@ -143,7 +144,7 @@ export function Sidebar({ className }: SidebarProps) {
 
         <button
           onClick={handleSignOut}
-          className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors"
+          className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-muted-foreground hover:bg-destructive/10 hover:text-destructive transition-colors"
         >
           <LogOut className="w-5 h-5" />
           Sign out
