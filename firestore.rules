@@ -21,9 +21,10 @@ service cloud.firestore {
     }
     
     // Courses collection: read-only for authenticated users
+    // Allow writes for seeding (can be restricted later)
     match /courses/{courseId} {
       allow read: if isAuthenticated();
-      allow write: if false; // Only server-side writes for now
+      allow write: if true; // Temporarily allow writes for seeding
     }
     
     // User progress collection: users can read/write their own progress
