@@ -37,11 +37,8 @@ export default function LoginPage() {
 
     try {
       const result = await signIn(data.email, data.password);
-      if (!result.user.emailVerified) {
-        router.push("/verify-email");
-      } else {
-        router.push("/");
-      }
+      // Email verification check disabled for now
+      router.push("/");
     } catch (err: unknown) {
       const firebaseError = err as { code?: string };
       if (

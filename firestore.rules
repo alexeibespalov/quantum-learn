@@ -1,0 +1,40 @@
+rules_version='2'
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper function to check if user is authenticated
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    // Helper function to check if user owns the document
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+    
+    // Users collection: users can read/write their own profile
+    match /users/{userId} {
+      allow read: if isOwner(userId);
+      allow create: if isAuthenticated() && request.auth.uid == userId;
+      allow update: if isOwner(userId);
+      allow delete: if isOwner(userId);
+    }
+    
+    // Add other collections as needed (lessons, subjects, etc.)
+    // For now, these are read-only for authenticated users
+    match /subjects/{document=**} {
+      allow read: if isAuthenticated();
+      allow write: if false; // Only server-side writes for now
+    }
+    
+    match /lessons/{document=**} {
+      allow read: if isAuthenticated();
+      allow write: if false; // Only server-side writes for now
+    }
+    
+    // Default: deny all other access
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

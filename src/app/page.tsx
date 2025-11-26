@@ -13,13 +13,12 @@ export default function Home() {
 
     if (!user) {
       router.replace("/login");
-    } else if (!user.emailVerified) {
-      router.replace("/verify-email");
     } else if (!userProfile?.onboardingCompleted) {
       router.replace("/onboarding");
     } else {
       router.replace("/dashboard");
     }
+    // Email verification check disabled for now
   }, [user, loading, userProfile, router]);
 
   return (

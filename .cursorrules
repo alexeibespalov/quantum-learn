@@ -1,0 +1,19 @@
+# Cursor Rules for QuantumLearn
+
+## Documentation References
+
+When strategizing architecture, planning features, or making design decisions, **ALWAYS** consult and consider the following documentation files:
+
+1. **instructions.md** - Contains the complete MVP technical design document with detailed specifications for all pages, features, and user flows. This is the authoritative source for feature requirements, UI/UX specifications, and MVP scope.
+
+2. **research.md** - Contains evidence-based learning science research, curriculum requirements, AI tutoring architecture, and pedagogical foundations. Reference this when implementing learning algorithms, adaptive systems, or educational features.
+
+3. **CLAUDE.md** - Contains project overview, tech stack, architecture notes, and development guidelines. Use this for understanding the technical foundation and project structure.
+
+## Guidelines
+
+- Before designing or implementing any feature, review the relevant sections in these files
+- When making architectural decisions, ensure alignment with the principles and patterns described in these documents
+- If there are conflicts or ambiguities, prioritize instructions.md for feature specifications, research.md for pedagogical/learning science decisions, and CLAUDE.md for technical implementation details
+- These files should be treated as the source of truth for project requirements and design decisions
+

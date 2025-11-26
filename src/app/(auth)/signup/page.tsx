@@ -50,7 +50,8 @@ export default function SignupPage() {
 
     try {
       await signUp(data.email, data.password);
-      router.push("/verify-email");
+      // Redirect to onboarding (email verification disabled)
+      router.push("/onboarding");
     } catch (err: unknown) {
       const firebaseError = err as { code?: string };
       if (firebaseError.code === "auth/email-already-in-use") {

@@ -22,8 +22,8 @@ export async function signUp(
     password
   );
 
-  // Send email verification
-  await sendEmailVerification(userCredential.user);
+  // Email verification disabled for now (emails not coming through)
+  // await sendEmailVerification(userCredential.user);
 
   // Create initial user profile in Firestore
   await createUserProfile(userCredential.user.uid, {

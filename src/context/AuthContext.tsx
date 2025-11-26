@@ -9,7 +9,7 @@ import {
 } from "react";
 import { User, onAuthStateChanged } from "firebase/auth";
 import { auth } from "@/lib/firebase/config";
-import { getUserProfile } from "@/lib/firebase/firestore";
+import { getUserProfile, createUserProfile } from "@/lib/firebase/firestore";
 import { UserProfile } from "@/types";
 
 interface AuthContextType {
@@ -58,7 +58,17 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
       if (firebaseUser) {
         try {
-          const profile = await getUserProfile(firebaseUser.uid);
+          let profile = await getUserProfile(firebaseUser.uid);
+          
+          // If profile doesn't exist, create it (fallback for existing users)
+          if (!profile) {
+            await createUserProfile(firebaseUser.uid, {
+              email: firebaseUser.email || "",
+              displayName: firebaseUser.displayName || "",
+            });
+            profile = await getUserProfile(firebaseUser.uid);
+          }
+          
           setUserProfile(profile);
         } catch (error) {
           console.error("Error fetching user profile:", error);
