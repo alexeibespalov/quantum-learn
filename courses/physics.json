@@ -1,0 +1,88 @@
+{
+  "id": "phys-year9-ks3",
+  "subjectId": "physics",
+  "title": "Physics: Energy & Forces",
+  "description": "Understanding the fundamental laws of the universe.",
+  "icon": "atom",
+  "level": 3,
+  "estimatedDuration": 3600,
+  "prerequisites": [],
+  "modules": [
+    {
+      "id": "phys-energy-1",
+      "title": "Energy Stores & Transfers",
+      "description": "Conservation of energy.",
+      "order": 1,
+      "lessons": [
+        {
+          "id": "phys-energy-1-1",
+          "type": "chat",
+          "title": "Energy Stores",
+          "duration": 20,
+          "order": 1,
+          "content": {
+            "openingMessage": "Energy cannot be created or destroyed, only transferred. It's the ultimate conservation law. When you eat a burger, what store of energy is that?",
+            "tutorConfig": {
+              "persona": "Energy Engineer",
+              "systemPrompt": "Teach Energy Stores (KG CEMENT).\n\n**Stores:** Kinetic, Gravitational, Chemical, Electrostatic, Magnetic, Elastic, Nuclear, Thermal.\n\n**Transfers:** Mechanically (forces), Electrically, Heating, Radiation (light/sound).\n\n**Example:** Dropping a ball. Gravitational -> Kinetic. Hitting the floor -> Thermal/Sound.\n**Activity:** Trace the energy changes in a battery-powered torch.",
+              "successCriteria": [
+                "List the 8 energy stores",
+                "Describe energy transfers in simple systems"
+              ],
+              "dynamicAssets": [
+                {
+                  "id": "vis-energy-rollercoaster",
+                  "trigger": "show_rollercoaster",
+                  "type": "image",
+                  "prompt": "A rollercoaster cart at the top of a high peak (Label: Max GPE). The same cart at the bottom of the loop (Label: Max KE). Arrows showing transfer from GPE to KE.",
+                  "altText": "Energy Transformation on Rollercoaster"
+                }
+              ]
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "phys-matter-1",
+      "title": "Particle Model",
+      "description": "Density and states of matter.",
+      "order": 2,
+      "lessons": [
+        {
+          "id": "phys-matter-1-1",
+          "type": "chat",
+          "title": "Density",
+          "duration": 20,
+          "order": 1,
+          "content": {
+            "openingMessage": "Which is heavier: A kilogram of lead or a kilogram of feathers? They weigh the same! But one takes up much less space. That's density.",
+            "tutorConfig": {
+              "persona": "Materials Scientist",
+              "systemPrompt": "Teach Density.\n\n**Formula:** Density = Mass / Volume ($\rho = m/v$).\n\n**Regular Objects:** Measure dimensions, calculate volume, weigh mass.\n**Irregular Objects (Eureka!):** Displacement can method. Archimedes principle.\n\n**Calculation:** If Mass = 100g and Volume = 20cm3, what is Density? (5g/cm3).",
+              "successCriteria": [
+                "Recall density formula",
+                "Describe displacement method for volume"
+              ],
+              "dynamicAssets": [
+                {
+                  "id": "vis-eureka-can",
+                  "trigger": "show_displacement",
+                  "type": "image",
+                  "prompt": "A Eureka can (overflow can) filled with water. A stone is being lowered into it. Water is spilling out of the spout into a measuring cylinder. Label: 'Volume of Stone = Volume of Displaced Water'.",
+                  "altText": "Eureka Can Experiment"
+                }
+              ]
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        }
+      ]
+    }
+  ],
+  "createdAt": "2025-11-28T10:00:00.000Z",
+  "updatedAt": "2025-11-28T10:00:00.000Z"
+}

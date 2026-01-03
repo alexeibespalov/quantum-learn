@@ -1,0 +1,89 @@
+{
+  "id": "chem-year9-ks3",
+  "subjectId": "chemistry",
+  "title": "Chemistry: Matter & Reactions",
+  "description": "Exploring the atomic world and how substances interact.",
+  "icon": "flask-conical",
+  "level": 3,
+  "estimatedDuration": 3600,
+  "prerequisites": [],
+  "modules": [
+    {
+      "id": "chem-atom-1",
+      "title": "Atomic Structure",
+      "description": "What makes up everything?",
+      "order": 1,
+      "lessons": [
+        {
+          "id": "chem-atom-1-1",
+          "type": "chat",
+          "title": "Inside the Atom",
+          "duration": 20,
+          "order": 1,
+          "content": {
+            "openingMessage": "Everything you touch is made of atoms. But atoms are mostly empty space! If an atom was the size of a stadium, the nucleus would be a marble in the center. What's buzzing around the outside?",
+            "tutorConfig": {
+              "persona": "Quantum Chemist",
+              "systemPrompt": "Teach Atomic Structure.\n\n**Parts:**\n- Protons (+1 charge, mass 1, in Nucleus).\n- Neutrons (0 charge, mass 1, in Nucleus).\n- Electrons (-1 charge, tiny mass, in Shells).\n\n**Key Concept:** Number of Protons = Atomic Number (Defines the element). Number of Electrons = Number of Protons (in a neutral atom).\n\n**Quiz:** Carbon has 6 Protons. How many electrons?",
+              "successCriteria": [
+                "Label parts of an atom",
+                "State relative charges and masses",
+                "Use the Periodic Table to find proton number"
+              ],
+              "dynamicAssets": [
+                {
+                  "id": "vis-atom-structure",
+                  "trigger": "show_atom",
+                  "type": "image",
+                  "prompt": "3D model of an Atom. Central nucleus with red (protons) and white (neutrons) spheres. Blue electron orbits spinning around it. Labels pointing to each part with their charge (+, 0, -).",
+                  "altText": "Atomic Structure"
+                }
+              ]
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "chem-sep-1",
+      "title": "Separation Techniques",
+      "description": "Purifying mixtures.",
+      "order": 2,
+      "lessons": [
+        {
+          "id": "chem-sep-1-1",
+          "type": "chat",
+          "title": "Separating Mixtures",
+          "duration": 25,
+          "order": 1,
+          "content": {
+            "openingMessage": "Imagine you dropped your salt shaker into a pile of sand. Nightmare. How could you use science to get the pure salt back?",
+            "tutorConfig": {
+              "persona": "Lab Technician",
+              "systemPrompt": "Teach Filtration, Crystallisation, and Distillation.\n\n**Scenario: Salt & Sand.**\n1. Add water (Salt dissolves, Sand doesn't).\n2. Filter (Sand stays in paper, Salt water goes through).\n3. Evaporate/Crystallise (Water goes, Salt stays).\n\n**Distillation:** Separating liquids by boiling point (e.g., Ethanol and Water). Explain the condenser.",
+              "successCriteria": [
+                "Design a separation method for a mixture",
+                "Explain how distillation works"
+              ],
+              "dynamicAssets": [
+                {
+                  "id": "vis-distillation",
+                  "trigger": "show_distillation",
+                  "type": "image",
+                  "prompt": "Lab setup for Simple Distillation. Round bottom flask being heated, thermometer, Leibig condenser (water jacket), receiving flask collecting pure liquid. Labels for 'Evaporation' and 'Condensation'.",
+                  "altText": "Distillation Apparatus"
+                }
+              ]
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        }
+      ]
+    }
+  ],
+  "createdAt": "2025-11-28T10:00:00.000Z",
+  "updatedAt": "2025-11-28T10:00:00.000Z"
+}

@@ -5,7 +5,7 @@
   "description": "Mastering the art of language and literature. From Shakespearean tragedy to persuasive rhetoric.",
   "icon": "book-open",
   "level": 3,
-  "estimatedDuration": 3600,
+  "estimatedDuration": 7200,
   "prerequisites": [],
   "modules": [
     {
@@ -71,39 +71,58 @@
             "embeddedQuestions": [],
             "comprehensionCheck": []
           }
+        },
+        {
+          "id": "eng-lang-1-3",
+          "type": "chat",
+          "title": "Character Voice",
+          "duration": 20,
+          "order": 3,
+          "content": {
+            "openingMessage": "How do you make a character sound real? If a queen and a pirate walked into a room, they wouldn't say 'Hello' the same way. Let's practice 'Voice'.",
+            "tutorConfig": {
+              "persona": "Acting Coach",
+              "systemPrompt": "Teach Character Voice and Dialogue.\n\n**Concept:** Idiolect (Individual way of speaking).\n**Factors:** Age, Class, Region, Mood.\n**Activity:**\n1. Write a line of dialogue for an Angry Headteacher finding a student skipping class.\n2. Write the SAME line for a chill Surfer Dude finding his friend.\n\n**Tip:** Punctuation affects voice! (Exclamation marks, ellipses...)",
+              "successCriteria": [
+                "Adapt dialogue for different characters",
+                "Use punctuation to suggest tone"
+              ],
+              "dynamicAssets": []
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
         }
       ]
     },
     {
-      "id": "eng-lit-1",
-      "title": "Shakespeare: Macbeth",
-      "description": "Ambition, Witchcraft, and Regicide.",
+      "id": "eng-lit-rj",
+      "title": "Romeo and Juliet",
+      "description": "Love, Hate, and Fate in Verona.",
       "order": 2,
       "lessons": [
         {
-          "id": "eng-lit-1-1",
+          "id": "eng-lit-rj-1",
           "type": "chat",
-          "title": "The Supernatural",
+          "title": "Ancient Grudge",
           "duration": 25,
           "order": 1,
           "content": {
-            "openingMessage": "In 1606, people didn't watch horror movies. They went to see Macbeth. The play opens with three Witches. Why do you think Shakespeare started this way?",
+            "openingMessage": "Two households, both alike in dignity... The Prologue gives away the ending! We know they die. So why do we watch? It's all about FATE.",
             "tutorConfig": {
-              "persona": "Renaissance Historian",
-              "systemPrompt": "Teach Context and Mood in Act 1 Scene 1.\n\n**Context:** King James I was obsessed with witch hunting (wrote 'Daemonologie'). Shakespeare wrote this to please him.\n**Analysis:** 'Fair is foul, and foul is fair'. (Paradox). \n**Discussion:** How does this line set the theme for the whole play? (Nothing is as it seems; good people turn bad).\n\n**Activity:** Analyze the witches' speech patterns (Trochaic Tetrameter - chanting) vs noble characters (Iambic Pentameter).",
+              "persona": "Shakespearean Director",
+              "systemPrompt": "Teach The Prologue and Conflict.\n\n**Key Phrase:** 'Star-crossed lovers' (Fate is against them).\n**The Feud:** Montagues vs Capulets. It's an ancient civil war.\n**Act 1 Scene 1:** The brawl. The Prince's warning ('Your lives shall pay the forfeit of the peace').\n\n**Discussion:** Is Romeo in love with Juliet at the start? No! He's pining for Rosaline. He's fickle.",
               "successCriteria": [
-                "Understand Jacobean context of witchcraft",
-                "Analyze 'Fair is foul'",
-                "Identify pathetic fallacy (Thunder and Lightning)"
+                "Analyze the Prologue",
+                "Explain the concept of 'Star-crossed'"
               ],
               "dynamicAssets": [
                 {
-                  "id": "vid-witches-intro",
-                  "trigger": "show_witches",
-                  "type": "video",
-                  "veoPrompt": "Cinematic scene on a desolate Scottish heath. Three mysterious, shrouded figures standing in mist and rain. Lightning flashes. They are chanting around a cauldron. Dark, moody, 17th-century theatre style.",
-                  "prompt": "Three Witches on a heath",
-                  "altText": "The Three Witches"
+                  "id": "vis-verona-brawl",
+                  "trigger": "show_brawl",
+                  "type": "image",
+                  "prompt": "A Renaissance street scene in Verona. Two groups of men with swords drawn facing off. Red colors for one side, Blue for the other. Angry expressions. Dust kicking up.",
+                  "altText": "The Brawl in Verona"
                 }
               ]
             },
@@ -112,21 +131,95 @@
           }
         },
         {
-          "id": "eng-lit-1-2",
+          "id": "eng-lit-rj-2",
           "type": "chat",
-          "title": "Lady Macbeth's Ambition",
+          "title": "The Balcony Scene",
           "duration": 25,
           "order": 2,
           "content": {
-            "openingMessage": "Macbeth writes to his wife about the prophecy. Her reaction? She wants to kill the King immediately. But she worries Macbeth is 'too full o' the milk of human kindness'. What does she mean?",
+            "openingMessage": "Possibly the most famous scene in history. Romeo is hiding in the garden. Juliet is talking to herself. 'O Romeo, Romeo! Wherefore art thou Romeo?' What does 'Wherefore' actually mean?",
             "tutorConfig": {
               "persona": "Literary Analyst",
-              "systemPrompt": "Analyze Act 1 Scene 5 (Lady Macbeth's Soliloquy).\n\n**Key Quotes:**\n- 'Unsex me here' (Remove feminine weakness/compassion).\n- 'Look like the innocent flower, but be the serpent under't' (Deception/Biblical imagery).\n\n**Discussion:** Is Lady Macbeth the true villain? She manipulates Macbeth by questioning his masculinity ('When you durst do it, then you were a man').",
+              "systemPrompt": "Teach Act 2 Scene 2.\n\n**Translation:** 'Wherefore' means WHY. She is asking 'Why are you a Montague?', not 'Where are you?'.\n**Imagery:** Light and Dark. Juliet is the Sun. The moon is envious.\n**Theme:** Names. 'A rose by any other name would smell as sweet'. She creates a private world where names don't matter.",
               "successCriteria": [
-                "Analyze 'Unsex me here'",
-                "Explain the theme of Gender and Power"
+                "Translate 'Wherefore art thou Romeo'",
+                "Analyze light/dark imagery"
               ],
               "dynamicAssets": []
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "eng-lit-sof",
+      "title": "The Sign of Four",
+      "description": "Sherlock Holmes and the Empire.",
+      "order": 3,
+      "lessons": [
+        {
+          "id": "eng-lit-sof-1",
+          "type": "chat",
+          "title": "The Science of Deduction",
+          "duration": 25,
+          "order": 1,
+          "content": {
+            "openingMessage": "Sherlock Holmes sits in a room, bored. He injects cocaine (legal then!). He needs a puzzle. Watch him deduce the history of a watch just by looking at scratches.",
+            "tutorConfig": {
+              "persona": "Victorian Detective",
+              "systemPrompt": "Teach Chapter 1: The Science of Deduction.\n\n**Holmes vs Watson:** Holmes is cold, logical, scientific. Watson is emotional, romantic, the 'reader'.\n**Theme:** Rationality vs Emotion.\n**Context:** Victorian awe of science and progress.\n\n**Activity:** Play a deduction game. 'I have mud on my left shoe and ink on my middle finger. What have I been doing?'",
+              "successCriteria": [
+                "Contrast Holmes and Watson",
+                "Explain the method of deduction"
+              ],
+              "dynamicAssets": [
+                {
+                  "id": "vis-holmes-study",
+                  "trigger": "show_study",
+                  "type": "image",
+                  "prompt": "Sherlock Holmes' study at 221B Baker Street. Cluttered but organized chaos. Chemicals, papers, a violin, a mantelpiece with letters attached by a knife. Victorian atmosphere.",
+                  "altText": "221B Baker Street"
+                }
+              ]
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "eng-lit-aic",
+      "title": "An Inspector Calls",
+      "description": "Social Responsibility and Class.",
+      "order": 4,
+      "lessons": [
+        {
+          "id": "eng-lit-aic-1",
+          "type": "chat",
+          "title": "The Birlings",
+          "duration": 25,
+          "order": 1,
+          "content": {
+            "openingMessage": "It's 1912. The Birling family is having a dinner party. They are rich, happy, and think the world is perfect. Mr. Birling says 'The Titanic is unsinkable' and 'War is impossible'. We call this Dramatic Irony.",
+            "tutorConfig": {
+              "persona": "Socialist Critic",
+              "systemPrompt": "Teach Act 1: The Setting and Mr. Birling.\n\n**Context:** Play written in 1945 (Post-WW2) but set in 1912 (Pre-WW1).\n**Dramatic Irony:** The audience knows he is wrong. It makes him look foolish and arrogant.\n**Theme:** Capitalism vs Socialism. Mr. Birling represents greedy capitalism ('A man has to mind his own business').\n**The Inspector:** Goole (Ghoul?). He cuts through the lighting (pink to hard/bright).",
+              "successCriteria": [
+                "Define Dramatic Irony",
+                "Analyze Mr. Birling's character"
+              ],
+              "dynamicAssets": [
+                {
+                  "id": "vis-birling-dinner",
+                  "trigger": "show_dinner",
+                  "type": "image",
+                  "prompt": "A lavish Edwardian dining room. A family in evening dress sitting around a table with port and cigars. The lighting is 'pink and intimate'. A shadow of an Inspector looms at the door.",
+                  "altText": "The Birling Dinner Party"
+                }
+              ]
             },
             "embeddedQuestions": [],
             "comprehensionCheck": []
@@ -138,7 +231,7 @@
       "id": "eng-lang-2",
       "title": "Non-Fiction & Persuasion",
       "description": "The power of rhetoric.",
-      "order": 3,
+      "order": 5,
       "lessons": [
         {
           "id": "eng-lang-2-1",
@@ -167,7 +260,7 @@
       "id": "eng-lit-2",
       "title": "Poetry Anthology",
       "description": "Power and Conflict.",
-      "order": 4,
+      "order": 6,
       "lessons": [
         {
           "id": "eng-lit-2-1",
@@ -201,6 +294,6 @@
       ]
     }
   ],
-  "createdAt": "2025-11-26T12:00:00.000Z",
-  "updatedAt": "2025-11-26T12:00:00.000Z"
+  "createdAt": "2025-11-28T10:00:00.000Z",
+  "updatedAt": "2025-11-28T10:00:00.000Z"
 }

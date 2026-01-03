@@ -1,0 +1,81 @@
+{
+  "id": "bio-year9-ks3",
+  "subjectId": "biology",
+  "title": "Biology: Cells & Systems",
+  "description": "The study of life, from microscopic cells to complex ecosystems.",
+  "icon": "leaf",
+  "level": 3,
+  "estimatedDuration": 3600,
+  "prerequisites": [],
+  "modules": [
+    {
+      "id": "bio-cells-1",
+      "title": "Cell Structure",
+      "description": "The building blocks of life.",
+      "order": 1,
+      "lessons": [
+        {
+          "id": "bio-cells-1-1",
+          "type": "chat",
+          "title": "Animal vs Plant Cells",
+          "duration": 20,
+          "order": 1,
+          "content": {
+            "openingMessage": "You are made of 37 trillion tiny Lego bricks called cells. But animal cells and plant cells aren't quite the same. Can you name one thing a plant cell has that you don't?",
+            "tutorConfig": {
+              "persona": "Microbiologist",
+              "systemPrompt": "Teach Animal vs Plant Cells.\n\n**Core Structures:**\n- Both: Nucleus (Brain), Cytoplasm (Jelly), Cell Membrane (Skin), Mitochondria (Powerhouse), Ribosomes (Protein factory).\n- Plant Only: Cell Wall (Structure), Chloroplasts (Photosynthesis), Permanent Vacuole (Sap).\n\n**Analogy:** Compare the cell to a city. Nucleus = City Hall. Mitochondria = Power Plant.\n\n**Activity:** Ask student to identify the function of the Mitochondria.",
+              "successCriteria": [
+                "Label animal and plant cells",
+                "Explain function of nucleus and mitochondria",
+                "Identify 3 differences between plant/animal cells"
+              ],
+              "dynamicAssets": [
+                {
+                  "id": "vis-cell-comparison",
+                  "trigger": "compare_cells",
+                  "type": "image",
+                  "prompt": "Side-by-side diagram of an Animal Cell (round, blueish) and Plant Cell (rectangular, green). Labels for Nucleus, Cytoplasm, Membrane, Mitochondria. Plant side highlights Cell Wall, Chloroplasts, Vacuole.",
+                  "altText": "Animal vs Plant Cell"
+                }
+              ]
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        },
+        {
+          "id": "bio-cells-1-2",
+          "type": "chat",
+          "title": "Transport: Diffusion & Osmosis",
+          "duration": 25,
+          "order": 2,
+          "content": {
+            "openingMessage": "If someone sprays perfume in the corner of a room, eventually you smell it everywhere. Why? It's not magic, it's Diffusion.",
+            "tutorConfig": {
+              "persona": "Biologist",
+              "systemPrompt": "Teach Transport in Cells.\n\n**Diffusion:** Movement from High Conc. to Low Conc. (Downhill).\n**Osmosis:** Diffusion of WATER through a semi-permeable membrane.\n**Active Transport:** Movement from Low to High (Uphill) - requires ENERGY.\n\n**Scenario:** Why do fingers go wrinkly in the bath? (Osmosis - water moving into cells?). Actually, it's a nervous response, but use the 'Gummy Bear in water' experiment as a better example of Osmosis (it swells).",
+              "successCriteria": [
+                "Define Diffusion and Osmosis",
+                "Explain importance of concentration gradients"
+              ],
+              "dynamicAssets": [
+                {
+                  "id": "vis-osmosis",
+                  "trigger": "show_osmosis",
+                  "type": "image",
+                  "prompt": "Diagram showing a beaker divided by a dashed line (membrane). Left side: mostly blue water molecules, few red sugar molecules. Right side: many red sugar molecules. Blue arrow shows water moving Left to Right to balance the concentration.",
+                  "altText": "Osmosis Diagram"
+                }
+              ]
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        }
+      ]
+    }
+  ],
+  "createdAt": "2025-11-28T10:00:00.000Z",
+  "updatedAt": "2025-11-28T10:00:00.000Z"
+}

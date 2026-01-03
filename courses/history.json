@@ -1,0 +1,167 @@
+{
+  "id": "history-year9-ks3",
+  "subjectId": "history",
+  "title": "History: The 20th Century World",
+  "description": "War, Peace, and the fight for Rights. A study of the conflicts and movements that shaped the modern world.",
+  "icon": "scroll",
+  "level": 3,
+  "estimatedDuration": 5400,
+  "prerequisites": [],
+  "modules": [
+    {
+      "id": "hist-ww1-1",
+      "title": "The Great War",
+      "description": "The causes and reality of World War I.",
+      "order": 1,
+      "lessons": [
+        {
+          "id": "hist-ww1-1-1",
+          "type": "chat",
+          "title": "The Powder Keg: Causes of WW1",
+          "duration": 25,
+          "order": 1,
+          "content": {
+            "openingMessage": "In 1914, Europe was a powder keg waiting for a spark. That spark was a sandwich and a wrong turn in Sarajevo. But the explosives had been piling up for years. We call them MAIN.",
+            "tutorConfig": {
+              "persona": "Historical Investigator",
+              "systemPrompt": "Teach the Causes of WW1 (MAIN).\n\n**Acronym:**\n- **M**ilitarism (Naval Race, Dreadnoughts).\n- **A**lliances (Triple Entente vs Triple Alliance).\n- **I**mperialism (Scramble for Africa).\n- **N**ationalism (Pride/Slavic desire for freedom).\n\n**The Spark:** Assassination of Archduke Franz Ferdinand by Gavrilo Princip.\n**Discussion:** Was the war inevitable without the assassination? (Yes, due to MAIN).",
+              "successCriteria": [
+                "Explain MAIN acronym",
+                "Connect the assassination to the Alliance system"
+              ],
+              "dynamicAssets": [
+                {
+                  "id": "vis-main-causes",
+                  "trigger": "show_main",
+                  "type": "image",
+                  "prompt": "A diagram showing four pillars holding up a bomb. Pillars labeled 'Militarism', 'Alliances', 'Imperialism', 'Nationalism'. A fuse runs from the bomb to a figure labeled 'Princip'.",
+                  "altText": "MAIN Causes Diagram"
+                }
+              ]
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        },
+        {
+          "id": "hist-ww1-1-2",
+          "type": "chat",
+          "title": "Life in the Trenches",
+          "duration": 25,
+          "order": 2,
+          "content": {
+            "openingMessage": "Soldiers thought they'd be home by Christmas. Instead, they dug in. Imagine living in a muddy ditch for four years. What do you think was the biggest killer? It wasn't always bullets.",
+            "tutorConfig": {
+              "persona": "War Correspondent",
+              "systemPrompt": "Teach Trench Warfare.\n\n**Conditions:** Mud, Trench Foot, Lice, Rats, Disease.\n**Tactics:** 'Over the Top', No Man's Land, Machine Guns, Barbed Wire.\n**Battle of the Somme (1916):** 60,000 casualties on Day 1. The futility of 'lions led by donkeys'.\n\n**Activity:** Describe a sensory walk-through of a trench.",
+              "successCriteria": [
+                "Describe trench conditions",
+                "Explain why the war became a stalemate"
+              ],
+              "dynamicAssets": [
+                {
+                  "id": "vis-trench-cross-section",
+                  "trigger": "show_trench",
+                  "type": "image",
+                  "prompt": "Cross-section diagram of a WWI trench. Shows sandbags (parapet), fire step, duckboards at bottom, dugout shelter. No Man's Land with barbed wire on top. Gritty, realistic style.",
+                  "altText": "Trench Cross-Section"
+                }
+              ]
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "hist-rights-1",
+      "title": "Votes for Women",
+      "description": "The struggle for suffrage.",
+      "order": 2,
+      "lessons": [
+        {
+          "id": "hist-rights-1-1",
+          "type": "chat",
+          "title": "Deeds Not Words",
+          "duration": 20,
+          "order": 1,
+          "content": {
+            "openingMessage": "In 1900, women had no vote, very few rights, and were seen as 'too emotional' for politics. Two groups fought to change this: The Suffragists and the Suffragettes. One used letters, the other used bombs.",
+            "tutorConfig": {
+              "persona": "Social Historian",
+              "systemPrompt": "Teach the Suffrage Movement.\n\n**Suffragists (NUWSS):** Millicent Fawcett. Peaceful, constitutional, lobbying. 'Slow and steady'.\n**Suffragettes (WSPU):** Emmeline Pankhurst. 'Deeds Not Words'. Militant: Window smashing, hunger strikes, arson, Emily Davison (horse).\n\n**Debate:** Which method was more effective? Did the violence help or hurt the cause?",
+              "successCriteria": [
+                "Distinguish between Suffragists and Suffragettes",
+                "Evaluate the impact of militant tactics"
+              ],
+              "dynamicAssets": [
+                {
+                  "id": "vis-suffragette-banner",
+                  "trigger": "show_banner",
+                  "type": "image",
+                  "prompt": "A purple, white, and green Suffragette banner. Text: 'DEEDS NOT WORDS'. Women marching in Edwardian dress with sashes. Historical poster style.",
+                  "altText": "Suffragette Banner"
+                }
+              ]
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "hist-ww2-prelude-1",
+      "title": "The Darkening of Europe",
+      "description": "The rise of dictators and the path to the Holocaust.",
+      "order": 3,
+      "lessons": [
+        {
+          "id": "hist-ww2-prelude-1-1",
+          "type": "chat",
+          "title": "The Rise of Dictators",
+          "duration": 20,
+          "order": 1,
+          "content": {
+            "openingMessage": "How does a democracy turn into a dictatorship? It often happens when people are scared and hungry. After WW1, Germany was broken.",
+            "tutorConfig": {
+              "persona": "Political Analyst",
+              "systemPrompt": "Teach the Rise of Hitler.\n\n**Context:** Treaty of Versailles (humiliation), Hyperinflation (money worthless), Great Depression (unemployment).\n**Hitler's Promise:** Work, Bread, and restoring Pride.\n**Tactics:** Propaganda, Scapegoating (blaming Jews/Communists), Fear (SS/Gestapo).\n\n**Concept:** 'The slippery slope'. Burning books -> Burning people.",
+              "successCriteria": [
+                "Explain how economic crisis aided Hitler",
+                "Define propaganda"
+              ],
+              "dynamicAssets": []
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        },
+        {
+          "id": "hist-ww2-prelude-1-2",
+          "type": "chat",
+          "title": "The Holocaust",
+          "duration": 30,
+          "order": 2,
+          "content": {
+            "openingMessage": "This is a difficult topic, but arguably the most important one we will study. We are looking at how prejudice became industrialised murder.",
+            "tutorConfig": {
+              "persona": "Empathetic Educator",
+              "systemPrompt": "Teach The Holocaust (Shoah).\n\n**Stages:**\n1. **Persecution:** Nuremberg Laws (stripped rights).\n2. **Ghettoisation:** Forcing Jews into walled districts.\n3. **Einsatzgruppen:** Mobile killing squads.\n4. **The Final Solution:** Wannsee Conference -> Death Camps (Auschwitz).\n\n**Focus:** Not just numbers (6 million), but humanity. Resistance, hiding, and the bystander effect.\n**Sensitive Topic Warning:** Handle with extreme care and factual gravity.",
+              "successCriteria": [
+                "Identify the stages of the Holocaust",
+                "Understand the term 'Genocide'"
+              ],
+              "dynamicAssets": []
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        }
+      ]
+    }
+  ],
+  "createdAt": "2025-11-28T10:00:00.000Z",
+  "updatedAt": "2025-11-28T10:00:00.000Z"
+}

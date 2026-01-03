@@ -1,0 +1,214 @@
+{
+  "id": "science-year9-ks3",
+  "subjectId": "science",
+  "title": "Science: Year 9 KS3 Mastery",
+  "description": "A journey through the fundamental principles of Biology, Chemistry, and Physics, preparing students for GCSEs.",
+  "icon": "flask-conical",
+  "level": 3,
+  "estimatedDuration": 5400,
+  "prerequisites": [],
+  "modules": [
+    {
+      "id": "sci-bio-1",
+      "title": "Biology: Cells & Systems",
+      "description": "The building blocks of life and how they work together.",
+      "order": 1,
+      "lessons": [
+        {
+          "id": "sci-bio-1-1",
+          "type": "chat",
+          "title": "Cell Structure",
+          "duration": 20,
+          "order": 1,
+          "content": {
+            "openingMessage": "You are made of 37 trillion tiny Lego bricks called cells. But animal cells and plant cells aren't quite the same. Can you name one thing a plant cell has that you don't?",
+            "tutorConfig": {
+              "persona": "Microbiologist",
+              "systemPrompt": "Teach Animal vs Plant Cells.\n\n**Core Structures:**\n- Both: Nucleus (Brain), Cytoplasm (Jelly), Cell Membrane (Skin), Mitochondria (Powerhouse), Ribosomes (Protein factory).\n- Plant Only: Cell Wall (Structure), Chloroplasts (Photosynthesis), Permanent Vacuole (Sap).\n\n**Analogy:** Compare the cell to a city. Nucleus = City Hall. Mitochondria = Power Plant.\n\n**Activity:** Ask student to identify the function of the Mitochondria.",
+              "successCriteria": [
+                "Label animal and plant cells",
+                "Explain function of nucleus and mitochondria",
+                "Identify 3 differences between plant/animal cells"
+              ],
+              "dynamicAssets": [
+                {
+                  "id": "vis-cell-comparison",
+                  "trigger": "compare_cells",
+                  "type": "image",
+                  "prompt": "Side-by-side diagram of an Animal Cell (round, blueish) and Plant Cell (rectangular, green). Labels for Nucleus, Cytoplasm, Membrane, Mitochondria. Plant side highlights Cell Wall, Chloroplasts, Vacuole.",
+                  "altText": "Animal vs Plant Cell"
+                }
+              ]
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        },
+        {
+          "id": "sci-bio-1-2",
+          "type": "chat",
+          "title": "Transport: Diffusion & Osmosis",
+          "duration": 25,
+          "order": 2,
+          "content": {
+            "openingMessage": "If someone sprays perfume in the corner of a room, eventually you smell it everywhere. Why? It's not magic, it's Diffusion.",
+            "tutorConfig": {
+              "persona": "Physics-Bio Bridge",
+              "systemPrompt": "Teach Transport in Cells.\n\n**Diffusion:** Movement from High Conc. to Low Conc. (Downhill).\n**Osmosis:** Diffusion of WATER through a semi-permeable membrane.\n**Active Transport:** Movement from Low to High (Uphill) - requires ENERGY.\n\n**Scenario:** Why do fingers go wrinkly in the bath? (Osmosis - water moving into cells?). Actually, it's a nervous response, but use the 'Gummy Bear in water' experiment as a better example of Osmosis (it swells).\n",
+              "successCriteria": [
+                "Define Diffusion and Osmosis",
+                "Explain importance of concentration gradients"
+              ],
+              "dynamicAssets": [
+                {
+                  "id": "vis-osmosis",
+                  "trigger": "show_osmosis",
+                  "type": "image",
+                  "prompt": "Diagram showing a beaker divided by a dashed line (membrane). Left side: mostly blue water molecules, few red sugar molecules. Right side: many red sugar molecules. Blue arrow shows water moving Left to Right to balance the concentration.",
+                  "altText": "Osmosis Diagram"
+                }
+              ]
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "sci-chem-1",
+      "title": "Chemistry: Matter & Separation",
+      "description": "From atoms to mixtures and how to separate them.",
+      "order": 2,
+      "lessons": [
+        {
+          "id": "sci-chem-1-1",
+          "type": "chat",
+          "title": "The Atom",
+          "duration": 20,
+          "order": 1,
+          "content": {
+            "openingMessage": "Everything you touch is made of atoms. But atoms are mostly empty space! If an atom was the size of a stadium, the nucleus would be a marble in the center. What's buzzing around the outside?",
+            "tutorConfig": {
+              "persona": "Quantum Chemist",
+              "systemPrompt": "Teach Atomic Structure.\n\n**Parts:**\n- Protons (+1 charge, mass 1, in Nucleus).\n- Neutrons (0 charge, mass 1, in Nucleus).\n- Electrons (-1 charge, tiny mass, in Shells).\n\n**Key Concept:** Number of Protons = Atomic Number (Defines the element). Number of Electrons = Number of Protons (in a neutral atom).\n\n**Quiz:** Carbon has 6 Protons. How many electrons?",
+              "successCriteria": [
+                "Label parts of an atom",
+                "State relative charges and masses",
+                "Use the Periodic Table to find proton number"
+              ],
+              "dynamicAssets": [
+                {
+                  "id": "vis-atom-structure",
+                  "trigger": "show_atom",
+                  "type": "image",
+                  "prompt": "3D model of an Atom. Central nucleus with red (protons) and white (neutrons) spheres. Blue electron orbits spinning around it. Labels pointing to each part with their charge (+, 0, -).",
+                  "altText": "Atomic Structure"
+                }
+              ]
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        },
+        {
+          "id": "sci-chem-1-2",
+          "type": "chat",
+          "title": "Separation Techniques",
+          "duration": 25,
+          "order": 2,
+          "content": {
+            "openingMessage": "Imagine you dropped your salt shaker into a pile of sand. Nightmare. How could you use science to get the pure salt back?",
+            "tutorConfig": {
+              "persona": "Lab Technician",
+              "systemPrompt": "Teach Filtration, Crystallisation, and Distillation.\n\n**Scenario: Salt & Sand.**\n1. Add water (Salt dissolves, Sand doesn't).\n2. Filter (Sand stays in paper, Salt water goes through).\n3. Evaporate/Crystallise (Water goes, Salt stays).\n\n**Distillation:** Separating liquids by boiling point (e.g., Ethanol and Water). Explain the condenser.",
+              "successCriteria": [
+                "Design a separation method for a mixture",
+                "Explain how distillation works"
+              ],
+              "dynamicAssets": [
+                {
+                  "id": "vis-distillation",
+                  "trigger": "show_distillation",
+                  "type": "image",
+                  "prompt": "Lab setup for Simple Distillation. Round bottom flask being heated, thermometer, Leibig condenser (water jacket), receiving flask collecting pure liquid. Labels for 'Evaporation' and 'Condensation'.",
+                  "altText": "Distillation Apparatus"
+                }
+              ]
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "sci-phys-1",
+      "title": "Physics: Energy & Forces",
+      "description": "The rules that govern the universe.",
+      "order": 3,
+      "lessons": [
+        {
+          "id": "sci-phys-1-1",
+          "type": "chat",
+          "title": "Energy Stores",
+          "duration": 20,
+          "order": 1,
+          "content": {
+            "openingMessage": "Energy cannot be created or destroyed, only transferred. It's the ultimate conservation law. When you eat a burger, what store of energy is that?",
+            "tutorConfig": {
+              "persona": "Energy Engineer",
+              "systemPrompt": "Teach Energy Stores (KG CEMENT).\n\n**Stores:** Kinetic, Gravitational, Chemical, Electrostatic, Magnetic, Elastic, Nuclear, Thermal.\n\n**Transfers:** Mechanically (forces), Electrically, Heating, Radiation (light/sound).\n\n**Example:** Dropping a ball. Gravitational -> Kinetic. Hitting the floor -> Thermal/Sound.\n**Activity:** Trace the energy changes in a battery-powered torch.",
+              "successCriteria": [
+                "List the 8 energy stores",
+                "Describe energy transfers in simple systems"
+              ],
+              "dynamicAssets": [
+                {
+                  "id": "vis-energy-rollercoaster",
+                  "trigger": "show_rollercoaster",
+                  "type": "image",
+                  "prompt": "A rollercoaster cart at the top of a high peak (Label: Max GPE). The same cart at the bottom of the loop (Label: Max KE). Arrows showing transfer from GPE to KE.",
+                  "altText": "Energy Transformation on Rollercoaster"
+                }
+              ]
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        },
+        {
+          "id": "sci-phys-1-2",
+          "type": "chat",
+          "title": "Density",
+          "duration": 20,
+          "order": 2,
+          "content": {
+            "openingMessage": "Which is heavier: A kilogram of lead or a kilogram of feathers? They weigh the same! But one takes up much less space. That's density.",
+            "tutorConfig": {
+              "persona": "Materials Scientist",
+              "systemPrompt": "Teach Density.\n\n**Formula:** Density = Mass / Volume ($\rho = m/v$).\n\n**Regular Objects:** Measure dimensions, calculate volume, weigh mass.\n**Irregular Objects (Eureka!):** Displacement can method. Archimedes principle.\n\n**Calculation:** If Mass = 100g and Volume = 20cm3, what is Density? (5g/cm3).",
+              "successCriteria": [
+                "Recall density formula",
+                "Describe displacement method for volume"
+              ],
+              "dynamicAssets": [
+                {
+                  "id": "vis-eureka-can",
+                  "trigger": "show_displacement",
+                  "type": "image",
+                  "prompt": "A Eureka can (overflow can) filled with water. A stone is being lowered into it. Water is spilling out of the spout into a measuring cylinder. Label: 'Volume of Stone = Volume of Displaced Water'.",
+                  "altText": "Eureka Can Experiment"
+                }
+              ]
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        }
+      ]
+    }
+  ],
+  "createdAt": "2025-11-28T10:00:00.000Z",
+  "updatedAt": "2025-11-28T10:00:00.000Z"
+}

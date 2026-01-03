@@ -5,7 +5,7 @@
   "description": "Building confidence in Speaking, Listening, Reading, and Writing. Focus on the three time frames.",
   "icon": "languages",
   "level": 2,
-  "estimatedDuration": 3600,
+  "estimatedDuration": 7200,
   "prerequisites": [],
   "modules": [
     {
@@ -189,8 +189,103 @@
           }
         }
       ]
+    },
+    {
+      "id": "fr-theme-health",
+      "title": "Health & Lifestyle",
+      "description": "Body parts and staying healthy.",
+      "order": 5,
+      "lessons": [
+        {
+          "id": "fr-theme-health-1",
+          "type": "chat",
+          "title": "At the Doctor",
+          "duration": 20,
+          "order": 1,
+          "content": {
+            "openingMessage": "Aïe! J'ai mal! (Ouch! I have pain!) You are the doctor. Ask me what is wrong.",
+            "tutorConfig": {
+              "persona": "French Doctor",
+              "systemPrompt": "Teach Body Parts and 'Avoir mal à'.\n\n**Phrase:** J'ai mal + au/à la/aux.\n- Au dos (back - masc).\n- À la tête (head - fem).\n- Aux dents (teeth - plural).\n\n**Roleplay:** Patient says 'J'ai mal au ventre'. Doctor gives advice: 'Il faut manger des légumes'.",
+              "successCriteria": [
+                "Name body parts",
+                "Use 'J'ai mal à' correctly"
+              ],
+              "dynamicAssets": [
+                {
+                  "id": "vis-body-pain",
+                  "trigger": "show_body",
+                  "type": "image",
+                  "prompt": "A cartoon figure holding their head (lightning bolt symbol for pain). Label: 'J'ai mal à la tête'. Another holding their knee. Label: 'J'ai mal au genou'.",
+                  "altText": "Body Parts and Pain"
+                }
+              ]
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "fr-theme-hols",
+      "title": "Holidays",
+      "description": "Travel plans and weather.",
+      "order": 6,
+      "lessons": [
+        {
+          "id": "fr-theme-hols-1",
+          "type": "chat",
+          "title": "Past Holidays",
+          "duration": 25,
+          "order": 1,
+          "content": {
+            "openingMessage": "Where did you go last year? 'L'année dernière, je suis allé...' Wait! Why is it 'je suis' and not 'j'ai'?",
+            "tutorConfig": {
+              "persona": "Travel Vlogger",
+              "systemPrompt": "Teach Perfect Tense with Être (Dr & Mrs Vandertramp).\n\n**Concept:** Movement verbs use Être.\n- Je suis allé(e) (I went).\n- Je suis parti(e) (I left).\n- Je suis resté(e) (I stayed).\n\n**Agreement:** If you are female, add an 'e'. If plural, add 's'.\n**Practice:** Tell me about your trip to Spain.",
+              "successCriteria": [
+                "Identify Vandertramp verbs",
+                "Use Être in the perfect tense"
+              ],
+              "dynamicAssets": []
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        },
+        {
+          "id": "fr-theme-hols-2",
+          "type": "chat",
+          "title": "The Weather",
+          "duration": 15,
+          "order": 2,
+          "content": {
+            "openingMessage": "Quel temps fait-il? (What's the weather like?) If it's raining, we can't go to the beach.",
+            "tutorConfig": {
+              "persona": "Weather Presenter",
+              "systemPrompt": "Teach Weather phrases.\n\n**Phrases:**\n- Il fait beau (It's nice).\n- Il fait chaud (It's hot).\n- Il pleut (It rains).\n- Il y a du vent (It's windy).\n\n**Tenses:**\n- Past: Il faisait beau.\n- Future: Il fera beau.\n\n**Activity:** Give a weather forecast for London vs Nice.",
+              "successCriteria": [
+                "Describe the weather",
+                "Compare weather in two places"
+              ],
+              "dynamicAssets": [
+                {
+                  "id": "vis-weather-map",
+                  "trigger": "show_forecast",
+                  "type": "image",
+                  "prompt": "A map of France. Sun icon over the South (Nice). Rain cloud icon over the North (Paris). Thermometer showing 30C vs 15C.",
+                  "altText": "France Weather Map"
+                }
+              ]
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        }
+      ]
     }
   ],
-  "createdAt": "2025-11-26T12:00:00.000Z",
-  "updatedAt": "2025-11-26T12:00:00.000Z"
+  "createdAt": "2025-11-28T10:00:00.000Z",
+  "updatedAt": "2025-11-28T10:00:00.000Z"
 }

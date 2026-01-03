@@ -1,0 +1,146 @@
+{
+  "id": "geog-year9-ks3",
+  "subjectId": "geography",
+  "title": "Geography: Our Changing World",
+  "description": "Exploring the physical and human forces shaping our planet, from tectonics to globalisation.",
+  "icon": "globe",
+  "level": 3,
+  "estimatedDuration": 5400,
+  "prerequisites": [],
+  "modules": [
+    {
+      "id": "geog-phys-1",
+      "title": "Earth's Story",
+      "description": "Tectonics and natural hazards.",
+      "order": 1,
+      "lessons": [
+        {
+          "id": "geog-phys-1-1",
+          "type": "chat",
+          "title": "Restless Earth",
+          "duration": 20,
+          "order": 1,
+          "content": {
+            "openingMessage": "The ground beneath your feet feels solid, but it's actually floating on a sea of molten rock. The Earth is like a jigsaw puzzle where the pieces are constantly moving.",
+            "tutorConfig": {
+              "persona": "Geologist",
+              "systemPrompt": "Teach Plate Tectonics.\n\n**Structure:** Inner Core, Outer Core, Mantle, Crust.\n**Movement:** Convection Currents in the Mantle move the plates.\n**Plate Margins:**\n- **Constructive:** Moving apart (New land, volcanoes).\n- **Destructive:** Moving together (Subduction, big quakes, volcanoes).\n- **Conservative:** Sliding past (Quakes only, no volcanoes - San Andreas).\n\n**Activity:** Predict what happens at the Himalayas (Collision - mountains, no volcanoes).",
+              "successCriteria": [
+                "Name the layers of the Earth",
+                "Describe the 3 types of plate margin"
+              ],
+              "dynamicAssets": [
+                {
+                  "id": "vis-plate-margins",
+                  "trigger": "show_margins",
+                  "type": "image",
+                  "prompt": "Three panels showing tectonic plate boundaries. 1. Constructive: Plates pulling apart, magma rising. 2. Destructive: One plate sliding under another, volcanoes forming. 3. Conservative: Plates sliding side-by-side. Arrows showing direction.",
+                  "altText": "Tectonic Plate Margins"
+                }
+              ]
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        },
+        {
+          "id": "geog-phys-1-2",
+          "type": "chat",
+          "title": "Climate Crisis",
+          "duration": 25,
+          "order": 2,
+          "content": {
+            "openingMessage": "The Earth has a blanket that keeps it warm. But we're making that blanket thicker and thicker. What happens when you wear a winter coat in a sauna?",
+            "tutorConfig": {
+              "persona": "Climate Scientist",
+              "systemPrompt": "Teach The Greenhouse Effect & Climate Change.\n\n**Mechanism:** Sun's heat enters -> Earth warms -> Heat tries to escape -> Greenhouse Gases (CO2, Methane) trap it.\n**Human Impact:** Burning fossil fuels, deforestation, farming cows (methane).\n**Consequences:** Rising sea levels, extreme weather, loss of habitats (polar bears).\n\n**Discussion:** Difference between 'Weather' and 'Climate'.",
+              "successCriteria": [
+                "Explain the Greenhouse Effect",
+                "Identify human causes of climate change"
+              ],
+              "dynamicAssets": [
+                {
+                  "id": "vis-greenhouse-effect",
+                  "trigger": "show_greenhouse",
+                  "type": "image",
+                  "prompt": "Diagram of Earth with a layer of atmosphere. Yellow sun rays entering. Red heat rays bouncing off Earth. Some escape, but some are trapped by 'gas clouds' and bounce back. Label: 'Greenhouse Effect'.",
+                  "altText": "The Greenhouse Effect"
+                }
+              ]
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "geog-human-1",
+      "title": "7 Billion and Counting",
+      "description": "Population dynamics and development.",
+      "order": 2,
+      "lessons": [
+        {
+          "id": "geog-human-1-1",
+          "type": "chat",
+          "title": "Population Explosion",
+          "duration": 20,
+          "order": 1,
+          "content": {
+            "openingMessage": "It took human history until 1800 to reach 1 billion people. We hit 8 billion in 2022. Why the sudden jump? And is it a problem?",
+            "tutorConfig": {
+              "persona": "Demographer",
+              "systemPrompt": "Teach Population Growth.\n\n**Factors:** improved medicine (vaccines), sanitation (clean water), agriculture (more food) -> Lower Death Rate.\n**Demographic Transition Model:**\n- Stage 1: High Birth, High Death (Stable).\n- Stage 2: High Birth, Falling Death (Explosion!).\n- Stage 5: Low Birth, Low Death (Aging population - Japan).\n\n**Concept:** Overpopulation vs Overconsumption.",
+              "successCriteria": [
+                "Explain reasons for population growth",
+                "Interpret a population pyramid"
+              ],
+              "dynamicAssets": [
+                {
+                  "id": "vis-population-graph",
+                  "trigger": "show_growth_curve",
+                  "type": "image",
+                  "prompt": "A line graph of world population. Flat for thousands of years, then a vertical spike starting around 1800. Label: 'The J-Curve'.",
+                  "altText": "Population Growth J-Curve"
+                }
+              ]
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "geog-human-2",
+      "title": "Globalisation",
+      "description": "A connected world.",
+      "order": 3,
+      "lessons": [
+        {
+          "id": "geog-human-2-1",
+          "type": "chat",
+          "title": "The Shrinking World",
+          "duration": 20,
+          "order": 1,
+          "content": {
+            "openingMessage": "Check the label on your shirt. Where was it made? Your phone? Your lunch? We live in a global village. But who wins and who loses?",
+            "tutorConfig": {
+              "persona": "Global Economist",
+              "systemPrompt": "Teach Globalisation.\n\n**Drivers:** Internet, Container Shipping, Air Travel.\n**TNCs (Transnational Corporations):** Companies like Nike/Apple operating in many countries.\n**Pros:** Jobs in developing countries, cheaper goods for us, cultural exchange.\n**Cons:** Sweatshops, environmental damage (shipping), loss of local culture ('Cloning' of high streets).\n\n**Case Study:** The journey of a pair of jeans.",
+              "successCriteria": [
+                "Define Globalisation",
+                "List pros and cons of TNCs"
+              ],
+              "dynamicAssets": []
+            },
+            "embeddedQuestions": [],
+            "comprehensionCheck": []
+          }
+        }
+      ]
+    }
+  ],
+  "createdAt": "2025-11-28T10:00:00.000Z",
+  "updatedAt": "2025-11-28T10:00:00.000Z"
+}
