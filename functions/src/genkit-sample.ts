@@ -42,7 +42,7 @@ const menuSuggestionFlow = ai.defineFlow({
     const prompt =
       `Suggest an item for the menu of a ${subject} themed restaurant`;
     const { response, stream } = ai.generateStream({
-      model: googleAI.model("gemini-2.5-flash"),
+      model: googleAI.model("gemini-3.0-flash"),
       prompt: prompt,
       config: {
         temperature: 1,

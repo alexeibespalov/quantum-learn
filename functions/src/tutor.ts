@@ -128,12 +128,12 @@ Do not describe the image in text if you are showing it. Just say something like
         const marker = `\n\n[DYNAMIC_ASSET:${assetId}:${asset.type}]\n\n`;
         sendChunk(marker);
 
-        return { assetId, type: asset.type, status: "displayed" };
+        return { assetId, type: asset.type as "image" | "video" | "graph", status: "displayed" };
       }
     );
 
     const { response, stream } = ai.generateStream({
-      model: googleAI.model("gemini-2.5-flash"),
+      model: googleAI.model("gemini-3.0-flash"),
       messages: messages as any, // Type assertion to bypass strict Genkit message checks for now
       tools: [triggerAssetTool],
       config: {

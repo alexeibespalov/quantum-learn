@@ -80,7 +80,7 @@ export const generateQuestionFlow = ai.defineFlow(
     `;
 
     const { output } = await ai.generate({
-      model: googleAI.model("gemini-2.5-flash"),
+      model: googleAI.model("gemini-3.0-flash"),
       prompt: prompt,
       output: { format: "json", schema: GeneratedQuestionSchema },
     });
@@ -125,7 +125,7 @@ export const evaluateAnswerFlow = ai.defineFlow(
     `;
 
     const { output } = await ai.generate({
-      model: googleAI.model("gemini-2.5-flash"),
+      model: googleAI.model("gemini-3.0-flash"),
       prompt: prompt,
       output: { format: "json", schema: EvaluationResultSchema },
     });

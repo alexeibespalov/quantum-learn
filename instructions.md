@@ -2,7 +2,7 @@
 
 **Version**: 2.0 (AI-Native Pivot)
 **Target Audience**: Year 9 UK student (ages 13-14)
-**Tech Stack**: Next.js 15, React 18, Firebase, **Genkit (Core Engine)**, **Nano Banana (Visuals)**, **Veo (Video)**
+**Tech Stack**: Next.js 15, React 18, Firebase, **Genkit (Core Engine)**, **Gemini 3.0 Flash (Brain)**, **Nano Banana (Visuals)**, **Veo (Video)**
 
 ---
 
